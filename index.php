@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- THIS WILL BE THE MAIN USER INTERFACE CONTAINER-->
     <?php
         include("src/home.php");
     ?>
