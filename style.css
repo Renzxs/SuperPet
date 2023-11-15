@@ -6,3 +6,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: "Cubao";
+    src: url("../assets/fonts/Cubao_Free_Regular.ttf");
+}
+
