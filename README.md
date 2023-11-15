@@ -13,9 +13,9 @@
 REMAINDER: TO RUN AND TEST THIS IN YOUR LOCAL COMPUTER, YOU HAVE MUST INSTALLED XAMPP IN YOUR LOCAL COMPUTER. YOU ALSO NEED TO CLONE THIS PROJECT FILE IN TO YOUR XAMPP HTDOCS FOLDER IN ORDER TO RUN IT IN YOUR WEB BROWSER FOR TESTING
 
 FILE DIRECTORIES:
-- src/assets/[icon, images, font] - Assets Directory
-- src/scripts/ - Javascripts Directory
-- src/styles/ - CSS Directory
+- ../assets/[icon, images, font] - Assets Directory
+- ../scripts/ - Javascripts Directory
+- ../styles/ - CSS Directory
 
 
 
