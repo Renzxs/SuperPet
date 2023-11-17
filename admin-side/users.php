@@ -11,7 +11,31 @@
 <body>
     <div class="container">
         <div class="nav-sidebar">
-            
+            <div class="nav-header">
+                <img src="../assets/images/admin_logo.png" alt="../assets/images/admin_logo.png" width="200">
+            </div>
+            <div class="main-nav">
+                <a href="#" class="link">
+                    <i class="fa-solid fa-users nav-icon"></i>
+                    <p class="nav-txt">Manage Users</p>
+                </a>
+                <a href="#" class="link">
+                    <i class="fa-solid fa-calendar nav-icon"></i>
+                    <p class="nav-txt">Appointments</p>
+                </a>
+                <a href="#" class="link">
+                    <i class="fa-solid fa-cart-shopping nav-icon"></i>
+                    <p class="nav-txt">Orders/Products</p>
+                </a>
+                <a href="#" class="link">
+                    <i class="fa-solid fa-paw nav-icon"></i>
+                    <p class="nav-txt">Pet Adoptions</p>
+                </a>
+                <a href="#" class="link">
+                    <i class="fa-solid fa-arrow-right-from-bracket nav-icon"></i>
+                    <p class="nav-txt">Log out</p>
+                </a>
+            </div>
         </div>
         <div class="main-container">
 
