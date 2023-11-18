@@ -78,10 +78,68 @@
         justify-content: center;
         gap: 20px;
     }
+}
 
-
+.in {
+    background-color: #2978A0;
+    border-radius: 0px 10px 10px 0;
+    width: 100%;
 }
 
 .container .main-container {
-   
+   width: 80%;
+   margin-left: 20%;
+   padding: 40px 20px 20px 20px;
 }
+
+.main-container .header-txt {
+    font-family: "Cubao";
+    font-weight: 100;
+    color: #0B2027;
+}
+
+.main-container table{
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.thead td {
+    text-align: center;
+    background-color: #2978A0;
+    color: white;
+}
+
+tr, td {
+    border: 3px solid black;
+    padding: 10px;
+    font-family: "MontserratAltXp";
+    font-size: 12px;
+}
+
+
+table input {
+    outline: none;
+    border: none;
+    font-family: "MontserratAltXp";
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#edit {
+    background-color: #2978A0;
+    color: white;
+}
+
+#delete {
+    background-color: #AF1818;
+    color: white;
+}
+
