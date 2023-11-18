@@ -35,6 +35,8 @@
                             $username = htmlentities($_POST["username"]);
                             $password = htmlentities($_POST["password"]);
 
+                            // TO-DO: DATABASE CONNECTION
+
                             header("Location: users.php");
                             exit; // Ensuring that code execution stops after the redirect header
                         }
