@@ -1,7 +1,6 @@
 <?php
     session_start();
 
-
     // DATABASE CONFIG 
     require_once '../config/mysql-connection.php';
 
@@ -19,6 +18,7 @@
         echo "<div> </div>";
     }
 
+    // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
         header("Location: login.php");
@@ -45,15 +45,15 @@
                     <i class="fa-solid fa-users nav-icon"></i>
                     <p class="nav-txt">Manage Users</p>
                 </a>
-                <a href="#" class="link">
+                <a href="appointments.php" class="link">
                     <i class="fa-solid fa-calendar nav-icon"></i>
                     <p class="nav-txt">Appointments</p>
                 </a>
-                <a href="#" class="link">
+                <a href="shop.php" class="link">
                     <i class="fa-solid fa-cart-shopping nav-icon"></i>
                     <p class="nav-txt">Orders/Products</p>
                 </a>
-                <a href="#" class="link">
+                <a href="pet-adoption.php" class="link">
                     <i class="fa-solid fa-paw nav-icon"></i>
                     <p class="nav-txt">Pet Adoptions</p>
                 </a>

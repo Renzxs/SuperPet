@@ -57,6 +57,10 @@ body {
     gap: 15px;
 }
 
+.main-nav form {
+    cursor: pointer;
+}
+
 .link {
     padding: 10px 10px 10px 10px;
     display: flex;
@@ -166,6 +170,10 @@ table form {
 #delete {
     background-color: #AF1818;
     color: white;
+}
+
+#logout {
+    cursor: pointer;
 }
 
 @media (max-width: 890px) {

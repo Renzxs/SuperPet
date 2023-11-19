@@ -36,13 +36,12 @@
                             $username = htmlentities($_POST["username"]);
                             $password = htmlentities($_POST["password"]);
                             
-                            // TO-DO: DATABASE CONNECTION
-                            $query = "SELECT * FROM users_tbl WHERE username = '$username' AND password = '$password'";
+                            $query = "SELECT * FROM users_tbl WHERE username = '$username' AND password = '$password' AND user_role = 'admin'";
                             $result = mysqli_query($conn, $query);
 
                             if(mysqli_num_rows($result) === 1) {
                                 $row = mysqli_fetch_assoc($result);
-                                if($row['username'] === $username && $row['password'] === $password){
+                                if($row['username'] === $username && $row['password'] === $password && $row['user_role'] === "admin"){
                                     // NAVIGATE TO THE NEXT PAGE
                                     $_SESSION["username"] = $username;
                                     $_SESSION["password"] = $password;
