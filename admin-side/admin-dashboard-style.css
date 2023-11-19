@@ -42,6 +42,10 @@ body {
     align-items: center;
 }
 
+.nav-sidebar form {
+    cursor: pointer;
+}
+
 .nav-header img {
     width: 80%;
 }
@@ -59,17 +63,29 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-txt {
     font-family: "MontserratAltXp";
     color: white;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .nav-icon {
     color: white;
     width: 20px;
+}
+
+#logout {
+    font-family: "MontserratAltXp";
+    color: white;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @media (max-width: 950px) {
@@ -81,6 +97,10 @@ body {
         display: none;
         justify-content: center;
         gap: 20px;
+    }
+
+    #logout {
+        display: none;
     }
 }
 

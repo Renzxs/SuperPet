@@ -15,8 +15,13 @@
     // EDIT USER
     if(isset($_POST['edit']) && isset($_POST['user_id'])) {
         $user_id = $_POST['user_id'];
-        
+        // TO-DO: EDIT USER INFORMATION
         echo "<div> </div>";
+    }
+
+    if(isset($_POST["logout"])){
+        session_destroy();
+        header("Location: login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -52,10 +57,10 @@
                     <i class="fa-solid fa-paw nav-icon"></i>
                     <p class="nav-txt">Pet Adoptions</p>
                 </a>
-                <a href="#" class="link">
-                    <i class="fa-solid fa-arrow-right-from-bracket nav-icon"></i>
-                    <p class="nav-txt">Log out</p>
-                </a>
+                <form action="users.php" method="post" class="link">
+                    <label for="logout"><i class="fa-solid fa-arrow-right-from-bracket nav-icon"></i></label>
+                    <input id="logout" name="logout" type="submit" value="Log out">
+                </form>
             </div>
         </div>
         <div class="main-container">
