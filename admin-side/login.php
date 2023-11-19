@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once '../config/mysql-connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,11 +35,27 @@
                         else {
                             $username = htmlentities($_POST["username"]);
                             $password = htmlentities($_POST["password"]);
-
+                            
                             // TO-DO: DATABASE CONNECTION
+                            $query = "SELECT * FROM users_tbl WHERE username = '$username' AND password = '$password'";
+                            $result = mysqli_query($conn, $query);
 
-                            header("Location: users.php");
-                            exit; // Ensuring that code execution stops after the redirect header
+                            if(mysqli_num_rows($result) === 1) {
+                                $row = mysqli_fetch_assoc($result);
+                                if($row['username'] === $username && $row['password'] === $password){
+                                    // NAVIGATE TO THE NEXT PAGE
+                                    $_SESSION["username"] = $username;
+                                    $_SESSION["password"] = $password;
+                                    header("Location: users.php");
+                                    mysqli_close($conn);
+                                    exit; 
+                                } else {
+                                    echo "<p class='error-msg'>Invalid username or password.</p>";
+                                }
+                            }
+                            else {
+                                echo "<p class='error-msg'>Invalid username or password.</p>";
+                            }
                         }
                     }
                 }

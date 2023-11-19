@@ -1,3 +1,24 @@
+<?php
+    session_start();
+
+
+    // DATABASE CONFIG 
+    require_once '../config/mysql-connection.php';
+
+     // DELETE USER
+     if(isset($_POST['delete']) && isset($_POST['user_id'])) {
+        $user_id = $_POST['user_id'];
+        $delete_query = "DELETE FROM users_tbl WHERE id = '$user_id'";
+        mysqli_query($conn, $delete_query);
+    }
+
+    // EDIT USER
+    if(isset($_POST['edit']) && isset($_POST['user_id'])) {
+        $user_id = $_POST['user_id'];
+        
+        echo "<div> </div>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,24 +65,47 @@
                     <td>ID</td>
                     <td>USERNAME</td>
                     <td>PASSWORD</td>
-                    <td>ADDRESS</td>
+                    <td>EMAIL</td>
                     <td>CONTACT NO.</td>
                     <td></td>
                 </tr>
-                <tr>
-                    <!-- PHP MYSQL CONNECT HERE -->
-                    <!-- <td>1</td>
-                    <td>Lebron James</td>
-                    <td>james132</td>
-                    <td>#54 United Nations</td>
-                    <td>0923242323</td>
-                    <td class="table-modify">
-                        <form action="users.php" method="post">
-                            <input type="button" id="edit" name="edit" value="Edit"> 
-                            <input type="button" id="delete" name="delete" value="Delete">
-                        </form>
-                    </td> -->
-                </tr>
+                <?php
+                    $query = "SELECT * FROM users_tbl;";
+                    $result = mysqli_query($conn, $query);
+
+                    if(mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            if($row['user_role'] == "admin") {
+                                echo "<tr>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['username'] . "</td>";
+                                echo "<td>" . $row['password'] . "</td>";
+                                echo "<td>" . $row['email'] . "</td>";
+                                echo "<td>" . $row['contact_no'] . "</td>";
+                                echo "</tr>";
+                            } else {
+                                echo "<tr>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['username'] . "</td>";
+                                echo "<td>" . $row['password'] . "</td>";
+                                echo "<td>" . $row['email'] . "</td>";
+                                echo "<td>" . $row['contact_no'] . "</td>";
+                                echo "<td class='table-modify'>
+                                        <form action='users.php' method='post'>
+                                            <input type='hidden' name='user_id' value='" . $row['id'] . "'>
+                                            <input type='submit' id='edit' name='edit' value='Edit'> 
+                                            <input type='submit' id='delete' name='delete' value='Delete'>
+                                        </form>
+                                    </td>";
+                                echo "</tr>";
+                            }
+
+                        }
+                    }
+                    else {
+                        echo "<tr><td colspan='6'>No users found</td></tr>";
+                    }
+                ?>
             </table>
         </div>
     </div>
