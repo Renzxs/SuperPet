@@ -14,6 +14,11 @@
     src: url("../assets/fonts/MontserratAlternates-ExtraBold.ttf");
 }
 
+@font-face {
+    font-family: "MontserratAltMed";
+    src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
 body {
     background-color: #F1DABF;
 }
@@ -127,40 +132,42 @@ body {
 }
 
 .main-container table{
-    border-collapse: collapse;
-    border: 2px solid black;
     margin-top: 20px;
     width: 100%;
+    background-color: white;
+    border: 2px solid #0B2027;
+
 }
 
 .thead td {
     text-align: center;
     background-color: #2978A0;
     color: white;
+    font-family: "MontserratAltXp";
 }
 
 tr, td {
-    border: 3px solid black;
     padding: 10px;
-    font-family: "MontserratAltXp";
+    font-family: "MontserratAltMed";
     font-size: 12px;
+    background-color: white;
 }
 
 
 table input {
     outline: none;
     border: none;
-    font-family: "MontserratAltXp";
+    font-family: "MontserratAltMed";
     padding: 10px;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 table form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 #edit {
     background-color: #2978A0;
@@ -189,6 +196,10 @@ table form {
     .header-txt {
         font-size: 20px;
     }
+
+    .edit-modal h1 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 713px) {
@@ -203,6 +214,10 @@ table form {
     }
 
     .header-txt {
+        font-size: 15px;
+    }
+
+    .edit-modal h1 {
         font-size: 15px;
     }
 } 
@@ -222,4 +237,141 @@ table form {
     .header-txt {
         font-size: 10px;
     }
+
+    .edit-modal h1 {
+        font-size: 12px;
+    }
+
+    .edit-modal {
+        width: 80%;
+    }
 } 
+
+.edit-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: rgba(02027, 02027, 02027, 0.8);
+    color: #0B2027;
+    padding: 40px 20px 40px 20px;
+    border-radius: 20px;    
+    display: none;
+}
+
+.edit-modal .header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.edit-modal h1 {
+    font-family: "Cubao";
+    font-weight: 100;
+}
+
+.edit-modal .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-modal input[id="to-change"] {
+    outline: none;
+    border: 2px solid #0B2027;
+    color: #0B2027;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-family: "MontserratAltMed";
+}
+
+
+
+.edit-modal input[type="button"]{
+    outline: none;
+    border: none;
+    background-color: #2978A0;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    font-family: "MontserratAltMed";
+    cursor: pointer;
+}
+
+
+@media (max-width: 890px) {
+    table tr, td{
+        width: 60%;
+        font-size: 8px;
+    }
+
+    table input {
+        font-size: 8px;
+    }
+
+    .header-txt {
+        font-size: 20px;
+    }
+
+    .edit-modal h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 713px) {
+    table tr, td{
+        font-size: 4px;
+        padding: 5px;
+    }
+
+    table input {
+        font-size: 4px;
+        padding: 3px;
+    }
+
+    .header-txt {
+        font-size: 15px;
+    }
+
+    .edit-modal h1 {
+        font-size: 15px;
+    }
+} 
+
+@media (max-width: 368px) {
+    table tr, td{
+        font-size: 2px;
+        padding: 3px;
+        border: 1px solid black;
+    }
+
+    table input {
+        font-size: 2px;
+        padding: 3px;
+    }
+
+    .header-txt {
+        font-size: 10px;
+    }
+
+    .edit-modal h1 {
+        font-size: 12px;
+    }
+
+    .edit-modal {
+        width: 80%;
+    }
+} 
+
+
+

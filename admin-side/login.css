@@ -14,6 +14,12 @@
     src: url("../assets/fonts/MontserratAlternates-ExtraBold.ttf");
 }
 
+@font-face {
+    font-family: "MontserratAltMed";
+    src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
+
 .container {
     background-color: #0B2027;
     width: 100%;
@@ -50,7 +56,7 @@
 }
 
 .h-subtext {
-    font-family: "MontserratAltXp";
+    font-family: "MontserratAltMed";
     margin-bottom: 20px;
 }
 
@@ -61,7 +67,7 @@
     padding: 10px;
     margin-bottom: 15px;
     width: 100%;
-    font-family: "MontserratAltXp";
+    font-family: "MontserratAltMed";
 }
 
 #password {
@@ -71,7 +77,7 @@
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
-    font-family: "MontserratAltXp";
+    font-family: "MontserratAltMed";
 }
 
 .login-btn-container {

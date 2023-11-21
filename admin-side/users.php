@@ -11,13 +11,6 @@
         mysqli_query($conn, $delete_query);
     }
 
-    // EDIT USER
-    if(isset($_POST['edit']) && isset($_POST['user_id'])) {
-        $user_id = $_POST['user_id'];
-        // TO-DO: EDIT USER INFORMATION
-        echo "<div> </div>";
-    }
-
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
@@ -63,6 +56,12 @@
                 </form>
             </div>
         </div>
+        <div class="edit-modal">
+            <div class="header">
+                <i class="fa-solid fa-black"></i>
+                <h1>Edit User Account</h1>
+            </div>
+        </div>
         <div class="main-container">
             <h1 class="header-txt">Manage Users</h1>
             <table>
@@ -71,7 +70,7 @@
                     <td>USERNAME</td>
                     <td>PASSWORD</td>
                     <td>EMAIL</td>
-                    <td>CONTACT NO.</td>
+                    <td>ADDRESS</td>
                     <td></td>
                 </tr>
                 <?php
@@ -86,7 +85,7 @@
                                 echo "<td>" . $row['username'] . "</td>";
                                 echo "<td>" . $row['password'] . "</td>";
                                 echo "<td>" . $row['email'] . "</td>";
-                                echo "<td>" . $row['contact_no'] . "</td>";
+                                echo "<td>" . $row['address'] . "</td>";
                                 echo "</tr>";
                             } else {
                                 echo "<tr>";
@@ -94,17 +93,15 @@
                                 echo "<td>" . $row['username'] . "</td>";
                                 echo "<td>" . $row['password'] . "</td>";
                                 echo "<td>" . $row['email'] . "</td>";
-                                echo "<td>" . $row['contact_no'] . "</td>";
+                                echo "<td>" . $row['address'] . "</td>";
                                 echo "<td class='table-modify'>
                                         <form action='users.php' method='post'>
-                                            <input type='hidden' name='user_id' value='" . $row['id'] . "'>
-                                            <input type='submit' id='edit' name='edit' value='Edit'> 
+                                            <input type='hidden' id='user_id' name='user_id' value='" . $row['id'] . "'>
                                             <input type='submit' id='delete' name='delete' value='Delete'>
                                         </form>
                                     </td>";
                                 echo "</tr>";
                             }
-
                         }
                     }
                     else {
@@ -116,3 +113,6 @@
     </div>
 </body>
 </html>
+
+
+
