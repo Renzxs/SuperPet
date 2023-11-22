@@ -226,7 +226,6 @@ table form {
     table tr, td{
         font-size: 2px;
         padding: 3px;
-        border: 1px solid black;
     }
 
     table input {
@@ -308,6 +307,17 @@ table form {
     cursor: pointer;
 }
 
+.main-container .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .menu-nav {
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
 
 @media (max-width: 890px) {
     table tr, td{
@@ -329,39 +339,40 @@ table form {
 }
 
 @media (max-width: 713px) {
-    table tr, td{
-        font-size: 4px;
+    table input {
+        font-size: 10px;
         padding: 5px;
     }
 
-    table input {
-        font-size: 4px;
-        padding: 3px;
+
+    .container .nav-sidebar {
+        display: none;
+    }
+    
+    .container .nav-sidebar.open {
+        display: flex;
     }
 
-    .header-txt {
-        font-size: 15px;
+    .container .main-container {
+        width: 100%;
+        margin: 0;
     }
 
-    .edit-modal h1 {
-        font-size: 15px;
+    .header .menu-nav {
+        margin-right: 10px;
+        display: block;
     }
 } 
 
-@media (max-width: 368px) {
+@media (max-width: 400px) {
     table tr, td{
         font-size: 2px;
         padding: 3px;
-        border: 1px solid black;
     }
 
     table input {
         font-size: 2px;
         padding: 3px;
-    }
-
-    .header-txt {
-        font-size: 10px;
     }
 
     .edit-modal h1 {
