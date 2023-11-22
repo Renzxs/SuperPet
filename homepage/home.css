@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Cubao";
+    src: url("../assets/fonts/Cubao_Free_Regular.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltXp";
+    src: url("../../assets/fonts/MontserratAlternates-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltMed";
+    src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
+.container {
+    width: 100%;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFB30F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px 15px 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li,  .nav-links a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 12px;
+    font-family: 'MontserratAltMed';
+}
+
+.nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #0B2027;
+}
+
+.announcement {
+    background-color: #D34E24;
+    text-align: center;
+    padding: 10px;
+    margin-top: 65px;
+}
+
+.announcement p {
+    font-family: "Cubao";
+    color: #F1DABF;
+    font-weight: 100;
+}
+
+#menu-nav-btn {
+    color: #0B2027;
+    display: none;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner-txt {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-txt img {
+    width: 50%;
+}
+
+.sub-desc {
+    font-family: 'MontserratAltMed';
+    text-align: center;
+    width: 30%;
+    color: #F1DABF;
+}
+
+.appointment-btn {
+    background-color: #D34E24;
+    text-decoration: none;
+    color: #F1DABF;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: 800;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.in {
+    background-color: #D34E24;
+    border: 2px solid #0B2027;
+    border-radius: 20px;
+    padding: 5px;
+    
+    color: #F1DABF;
+}
+
+@media (max-width: 870px) {
+    #menu-nav-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .announcement p {
+        font-size: 10px;
+    }
+
+    .sub-desc {
+        font-size: 12px;
+        width: 60%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow: hidden;
+    }    
+
+    .banner-txt {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .banner img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 877px) {
+    .banner-txt {
+        width: 50%;
+        left: 25%;
+        right: 15%;
+    }
+
+    .sub-desc {
+        width: 100%;
+    }
+
+    .appointment-btn {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .banner-txt {
+        margin-top: 20px;
+        width: 90%;
+        left: 5%;
+        right: 10%;
+    }
+}
