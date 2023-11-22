@@ -7,8 +7,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SuperPet | Admin Login</title>
-        <link rel="stylesheet" href="styles/admin-login.css">
+        <title>SuperPet | Login</title>
+        <link rel="stylesheet" href="styles/login.css">
         <link rel="icon" href="../assets/images/superpet_logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
@@ -21,9 +21,9 @@
             <div class="container-login">
                <div class="login-form">
                     <div class="links">
-                        <a href="../login-register/register.php" class="link">NEW USER</a>
-                        <a href="../login-register/login.php" class="link">EXISTING USER</a>
-                        <a href="#" class="link in-log">ADMIN</a>
+                        <a href="register.php" class="link">NEW USER</a>
+                        <a href="#" class="link in-log">EXISTING USER</a>
+                        <a href="../admin-side/admin-login.php" class="link">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <p class="input-label">EMAIL</p>
@@ -45,16 +45,16 @@
                                     $email = htmlentities($_POST["email"]);
                                     $password = htmlentities($_POST["password"]);
                                     
-                                    $query = "SELECT * FROM users_tbl WHERE email = '$email' AND password = '$password' AND user_role = 'admin'";
+                                    $query = "SELECT * FROM users_tbl WHERE email = '$email' AND password = '$password' AND user_role = 'customer'";
                                     $result = mysqli_query($conn, $query);
 
                                     if(mysqli_num_rows($result) === 1) {
                                         $row = mysqli_fetch_assoc($result);
-                                        if($row['email'] === $email && $row['password'] === $password && $row['user_role'] === "admin"){
+                                        if($row['email'] === $email && $row['password'] === $password && $row['user_role'] === "customer"){
                                             // NAVIGATE TO THE NEXT PAGE
                                             $_SESSION["email"] = $email;
                                             $_SESSION["password"] = $password;
-                                            header("Location: users.php");
+                                            // NAVIGATE USER TO HOME PAGE 
                                             mysqli_close($conn);
                                             exit; 
                                         } else {

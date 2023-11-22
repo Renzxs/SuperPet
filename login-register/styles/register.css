@@ -154,11 +154,21 @@ input[type="submit"]{
     text-align: center;
 }
 
+.success-msg {
+    font-family: "MontserratAltXp";
+    color: rgb(143, 234, 8);
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
 
 @media (max-width: 867px) {
     .container {
         flex-direction: column;
         gap: 30px;
+        height: 130vh;
         padding: 20px;
     }
 
@@ -183,9 +193,10 @@ input[type="submit"]{
         padding: 5px;
         font-size: 10px;
     }
-    
+
     .input-label {
         font-size: 12px;
     }
+    
     
 }

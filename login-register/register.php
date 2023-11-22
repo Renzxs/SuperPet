@@ -7,8 +7,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SuperPet | Admin Login</title>
-        <link rel="stylesheet" href="styles/admin-login.css">
+        <title>SuperPet | Login</title>
+        <link rel="stylesheet" href="styles/register.css">
         <link rel="icon" href="../assets/images/superpet_logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
@@ -21,48 +21,49 @@
             <div class="container-login">
                <div class="login-form">
                     <div class="links">
-                        <a href="../login-register/register.php" class="link">NEW USER</a>
-                        <a href="../login-register/login.php" class="link">EXISTING USER</a>
-                        <a href="#" class="link in-log">ADMIN</a>
+                        <a href="#" class="link in-log">NEW USER</a>
+                        <a href="login.php" class="link ">EXISTING USER</a>
+                        <a href="../admin-side/admin-login.php" class="link">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <p class="input-label">EMAIL</p>
-                        <input type="email" name="email" id="email" class="txt-input">
+                        <p class="input-label">USERNAME</p>
+                        <input type="text" name="username" id="username" class="txt-input">
                         <p class="input-label">PASSWORD</p>
                         <input type="password" name="password" id="password" class="txt-input">
+                        <p class="input-label">EMAIL</p>
+                        <input type="email" name="email" id="email" class="txt-input">
+                        <p class="input-label">ADDRESS</p>
+                        <input type="text" name="address" id="address" class="txt-input">
                         <br>
                         <div class="login-btn-container">
-                            <input type="submit" value="LOG IN" name="login">
+                            <input type="submit" value="REGISTER" name="register">
                         </div>
                     </form>
                     <?php
                         if($_SERVER["REQUEST_METHOD"] == "POST"){
-                            if(isset($_POST["login"])) {
-                                if(empty($_POST["email"]) || empty($_POST["password"])) {
+                            if(isset($_POST["register"])) {
+                                if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"]) || empty($_POST["address"])) {
                                     echo "<p class='error-msg'>Please do not leave textboxes empty.</p>";
                                 } 
                                 else {
-                                    $email = htmlentities($_POST["email"]);
+                                    $username = htmlentities($_POST["username"]);
                                     $password = htmlentities($_POST["password"]);
-                                    
-                                    $query = "SELECT * FROM users_tbl WHERE email = '$email' AND password = '$password' AND user_role = 'admin'";
-                                    $result = mysqli_query($conn, $query);
+                                    $email = htmlentities($_POST["email"]);
+                                    $address = htmlentities($_POST["address"]);
+
+                                    $checkEmail = "SELECT email FROM users_tbl WHERE email = '$email'";
+                                    $result = mysqli_query($conn, $checkEmail);
 
                                     if(mysqli_num_rows($result) === 1) {
-                                        $row = mysqli_fetch_assoc($result);
-                                        if($row['email'] === $email && $row['password'] === $password && $row['user_role'] === "admin"){
-                                            // NAVIGATE TO THE NEXT PAGE
-                                            $_SESSION["email"] = $email;
-                                            $_SESSION["password"] = $password;
-                                            header("Location: users.php");
+                                        echo "<p class='error-msg'>Your email is already registered.</p>";
                                             mysqli_close($conn);
-                                            exit; 
-                                        } else {
-                                            echo "<p class='error-msg'>Invalid username or password.</p>";
-                                        }
-                                    }
+                                    } 
                                     else {
-                                        echo "<p class='error-msg'>Invalid username or password.</p>";
+                                            $query = "INSERT INTO users_tbl (username, password, email, address, user_role) 
+                                            VALUES ('$username', '$password', '$email', '$address', 'customer')";
+                                            mysqli_query($conn, $query);
+                                            echo "<p class='success-msg'>You successfully created your account!</p>";
+                                            mysqli_close($conn);
                                     }
                                 }
                             }
