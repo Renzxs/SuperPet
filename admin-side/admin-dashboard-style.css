@@ -364,7 +364,7 @@ table form {
     }
 } 
 
-@media (max-width: 400px) {
+@media (max-width: 411px) {
     table tr, td{
         font-size: 2px;
         padding: 3px;
