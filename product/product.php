@@ -96,7 +96,7 @@
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
                         <div class="img">
-                            <img src="../assets/images/1.png" alt="" width="250">
+                            <img src="../assets/images/itch.png" alt="" width="250">
                         </div>
                     </div>
                     <div class="product-desc">
@@ -115,7 +115,7 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/2.png" alt="" width="250">
+                        <img src="../assets/images/eagle.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
                         <h1 class="name">Eagle Mountain</h1>
@@ -133,7 +133,7 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/3.png" alt="" width="250">
+                        <img src="../assets/images/percuro.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
                         <h1 class="name">Percuro</h1>
@@ -155,7 +155,7 @@
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
                         <div class="img">
-                            <img src="../assets/images/1.png" alt="" width="250">
+                            <img src="../assets/images/dinovite.png" alt="" width="250">
                         </div>
                     </div>
                     <div class="product-desc">
@@ -174,7 +174,7 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/2.png" alt="" width="250">
+                        <img src="../assets/images/lifetime.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
                         <h1 class="name">Lifetime</h1>
@@ -192,7 +192,7 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/3.png" alt="" width="250">
+                        <img src="../assets/images/more.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
                         <h1 class="name">More</h1>
