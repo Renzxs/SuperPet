@@ -208,7 +208,10 @@
                 </div>                
             </div>
 
-            
+        <footer>
+            <img src="../assets/images/Letter_Logo.png" alt="">
+            <p>©2023 SUPERPET by SUPERTEAM STUDIOS. All Rights Reserved.</p>
+         </footer>
 
         </div>
 
