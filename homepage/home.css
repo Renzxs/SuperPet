@@ -11,12 +11,16 @@
 
 @font-face {
     font-family: "MontserratAltXp";
-    src: url("../../assets/fonts/MontserratAlternates-ExtraBold.ttf");
+    src: url("../assets/fonts/MontserratAlternates-ExtraBold.ttf");
 }
 
 @font-face {
     font-family: "MontserratAltMed";
     src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
+body {
+    background-color: #F1DABF;
 }
 
 .container {
@@ -32,6 +36,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px 15px 20px;
+    z-index: 1;
 }
 
 .nav-links {
@@ -73,6 +78,7 @@
 #menu-nav-btn {
     color: #0B2027;
     display: none;
+    cursor: pointer;
 }
 
 .banner {
@@ -127,9 +133,182 @@
     border: 2px solid #0B2027;
     border-radius: 20px;
     padding: 5px;
-    
     color: #F1DABF;
 }
+
+.stickers {
+    margin-top: 30px;
+    background-color: #F1DABF;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sticker {
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sticker-title {
+    color: #0B2027;
+    font-family: "Cubao";
+}
+
+.sticker-desc {
+    color: #0B2027;
+    font-family: "MontserratAltMed";
+    font-size: 12px;
+}
+
+.product-page {
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.product-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-header p {
+    width: 60%;
+    text-align: center;
+    font-family: "MontserratAltMed";
+    font-size: 12px;
+}
+
+.product-header img {
+    width: 50%;
+}
+
+.show-now-btn {
+    text-decoration: none;
+    font-family: "MontserratAltXp";
+    color: #F1DABF;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    background-color: #D34E24;
+}
+
+.products-list {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 230px;
+}
+
+.product-img {
+    background-color: #D34E24;
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-img .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.limited-product {
+    background-color: #FFB30F;
+}
+
+.limited-product-chip {
+    background-color: #D34E24;
+}
+
+.product-img .product-categ-chip {
+    background-color: #FFB30F;
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
+    font-family: "MontserratAltXp";
+    color: #0B2027;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 2px solid #0B2027;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    margin-top: 10px;
+}
+
+.product-desc .name{
+    font-family: 'Cubao';
+    color: #0B2027;
+}
+
+.product-desc .price {
+    font-family: 'MontserratAltXp';
+    color: #0B2027;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.product-desc .desc {
+    font-family: 'MontserratAltMed';
+    color: #0B2027;
+    font-size: 12px;
+}
+
+.product-button {
+    margin-top: 20px;
+}
+
+.product-button input{
+    outline: none;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    font-weight: 800;
+}
+
+#buy {
+    background-color: #FFB30F;
+}
+
+#add-to-cart {
+    background-color: #D34E24;
+}      
 
 @media (max-width: 870px) {
     #menu-nav-btn {
@@ -166,6 +345,10 @@
         height: 100%;
         width: 100%;
     }
+
+    .product-header img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 877px) {
@@ -182,6 +365,10 @@
     .appointment-btn {
         font-size: 10px;
     }
+
+    .sticker-title {
+        font-size: 25px;
+     }
 }
 
 @media (max-width: 420px) {
@@ -190,5 +377,13 @@
         width: 90%;
         left: 5%;
         right: 10%;
+    }
+
+    .product-header img {
+        width: 100%;
+    }
+
+    .product-header p {
+        width: 100%;
     }
 }

@@ -37,6 +37,95 @@
                 <a href="#" class="appointment-btn">BOOK AN APPOINTMENT</a>
             </div>
         </div>
+        <div class="stickers">
+            <div class="sticker">
+                <img src="../assets/images/dog.png" alt="" width="100px">
+                <h1 class="sticker-title">Supercare for SuperPets</h1>
+                <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
+            </div>
+            <div class="sticker">
+                <img src="../assets/images/duck.png" alt="" width="100px">
+                <h1 class="sticker-title">Compassionate Service</h1>
+                <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
+            </div>
+            <div class="sticker">
+                <img src="../assets/images/cat.png" alt="" width="100px">
+                <h1 class="sticker-title">Top-Notch Facilities</h1>
+                <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
+            </div>
+            <div class="sticker">
+                <img src="../assets/images/froggy.png" alt="" width="100px">
+                <h1 class="sticker-title">Community Support</h1>
+                <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
+            </div>
+        </div>
+
+        <div class="product-page">
+            <div class="product-header">
+                <img src="../assets/images/superpet-product.png" alt="" width="500">
+                <p class="desc">Explore SuperPet's curated selection of premium products. tailored to enhance your pet's joy and well-being.</p>
+                <a href="#" class="show-now-btn">SHOP NOW!</a>
+            </div>
+            <div class="products-list">
+                <!-- USE PHP TO SHOW PRODUCTS HERE -->
+                <div class="product">
+                    <div class="product-img">
+                        <div class="product-categ-chip">Best Seller</div>
+                        <div class="img">
+                            <img src="../assets/images/1.png" alt="" width="250">
+                        </div>
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="name">Woofy</h1>
+                        <p class="price">$ 29.00</p>
+                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <div class="product-button">
+                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                            </form>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-img">
+                        <div class="product-categ-chip ">Best Seller</div>
+                        <img src="../assets/images/2.png" alt="" width="250">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="name">Woofy</h1>
+                        <p class="price">$ 29.00</p>
+                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <div class="product-button">
+                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                            </form>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-img">
+                        <div class="product-categ-chip">Best Seller</div>
+                        <img src="../assets/images/3.png" alt="" width="250">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="name">Woofy</h1>
+                        <p class="price">$ 29.00</p>
+                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <div class="product-button">
+                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                            </form>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 </body>
