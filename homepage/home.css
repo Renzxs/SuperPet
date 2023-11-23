@@ -137,7 +137,8 @@ body {
 }
 
 .stickers {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-color: #F1DABF;
     width: 100%;
     display: flex;
@@ -171,7 +172,6 @@ body {
 .product-page {
     margin-top: 50px;
     width: 100%;
-    height: 100vh;
     padding: 20px;
 }
 
@@ -217,6 +217,7 @@ body {
     align-items: center;
     gap: 80px;
     flex-wrap: wrap;
+    padding: 30px
 }
 
 .product {
@@ -308,7 +309,80 @@ body {
 
 #add-to-cart {
     background-color: #D34E24;
-}      
+}    
+
+.pet-adopt-page {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.adopt-banner {
+    background-color: #FFB30F;
+    color: #007BA7;
+    font-family: 'MontserratAltMed';
+    text-wrap: nowrap;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.main-adopt-page {
+    width: 100%;
+    height: 80%;
+    background-color: #007BA7;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-adopt-page .pets-bg{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.adopt-text{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.adopt-desc {
+    font-size: 12px;
+    font-family: 'MontserratAltMed';
+    color: #F1DABF;
+    width: 50%;
+    text-align: center;
+    font-weight: 100;
+}
+
+.adopt-now {
+    text-decoration: none;
+    font-family: "MontserratAltXp";
+    color: #0B2027;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    background-color: #FFB30F;
+}
+
+footer {
+    margin-top: -80px;
+    width: 100%;
+    height: 100px;
+    background-color: #0B2027;
+}
 
 @media (max-width: 870px) {
     #menu-nav-btn {
@@ -349,6 +423,10 @@ body {
     .product-header img {
         width: 80%;
     }
+
+    .pets-bg {
+        display: none;
+    }
 }
 
 @media (max-width: 877px) {
@@ -385,5 +463,18 @@ body {
 
     .product-header p {
         width: 100%;
+    }
+
+    .adopt-text img {
+        width: 80%;
+    }
+
+    .main-adopt-page {
+        height: 50%;
+    }
+
+
+    .adopt-desc {
+        width: 80%;
     }
 }

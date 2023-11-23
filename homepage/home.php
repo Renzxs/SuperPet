@@ -63,7 +63,7 @@
         <div class="product-page">
             <div class="product-header">
                 <img src="../assets/images/superpet-product.png" alt="" width="500">
-                <p class="desc">Explore SuperPet's curated selection of premium products. tailored to enhance your pet's joy and well-being.</p>
+                <p class="desc"><strong>Explore SuperPet's curated selection of premium products.</strong> tailored to enhance your pet's joy and well-being.</p>
                 <a href="#" class="show-now-btn">SHOP NOW!</a>
             </div>
             <div class="products-list">
@@ -108,7 +108,7 @@
 
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip">Best Seller</div>
+                        <div class="product-categ-chip">On Sale</div>
                         <img src="../assets/images/3.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
@@ -124,8 +124,23 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <div class="pet-adopt-page">
+            <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
+            <div class="main-adopt-page">
+                <img class="pets-bg" src="../assets/images/adopt-hero.webp" alt="">
+                <div class="adopt-text">
+                    <img src="../assets/images/ADOPT YOUR SUPERPET.png" alt="" width="300">
+                    <p class="adopt-desc"><strong>Discover furry friends waiting to share love, joy, and companionship.</strong> Make a lifelong connection with your perfect match today!</p>
+                    <a href="#" class="adopt-now">LET'S ADOPT NOW!</a>
+                </div>
+            </div>
+            <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
+        </div>
+        <footer>
+            
+        </footer>
 
     </div>
 </body>
