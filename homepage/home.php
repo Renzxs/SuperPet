@@ -137,11 +137,11 @@
                 </div>
             </div>
             <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
-        </div>
+        </div>            
         <footer>
-            
-        </footer>
-
+            <img src="../assets/images/Letter_Logo.png" alt="" width="200">
+            <p>©2023 SUPERPET by SUPERTEAM STUDIO. All Rights Reserved.</p>
+         </footer>
     </div>
 </body>
 </html>

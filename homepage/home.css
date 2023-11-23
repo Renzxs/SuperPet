@@ -36,7 +36,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px 15px 20px;
-    z-index: 1;
+    z-index: 5;
 }
 
 .nav-links {
@@ -314,7 +314,6 @@ body {
 .pet-adopt-page {
     width: 100%;
     overflow: hidden;
-    height: 100vh;
     margin-top: 50px;
 }
 
@@ -330,7 +329,7 @@ body {
 
 .main-adopt-page {
     width: 100%;
-    height: 80%;
+    height: 80vh;
     background-color: #007BA7;
     position: relative;
     display: flex;
@@ -378,10 +377,24 @@ body {
 }
 
 footer {
-    margin-top: -80px;
     width: 100%;
-    height: 100px;
+    padding: 20px;
     background-color: #0B2027;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer p {
+    color: #F1DABF;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
 }
 
 @media (max-width: 870px) {
@@ -467,10 +480,6 @@ footer {
 
     .adopt-text img {
         width: 80%;
-    }
-
-    .main-adopt-page {
-        height: 50%;
     }
 
 
