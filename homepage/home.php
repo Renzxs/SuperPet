@@ -17,7 +17,7 @@
                 <ul class="nav-links">
                     <li class="in"><a href="#">Home</a></li>
                     <li><a href="#">Book an Appointment</a></li>
-                    <li><a href="#">SuperPet Products</a></li>
+                    <li><a href="../product/product.php">SuperPet Products</a></li>
                     <li><a href="#">Adopt your SuperPet</a></li>
                 </ul>
             </nav>

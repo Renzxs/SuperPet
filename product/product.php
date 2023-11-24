@@ -15,7 +15,7 @@
             <img src="../assets/images/Letter_Logo.png" alt="" width="150px">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../homepage/home.php">Home</a></li>
                     <li><a href="#">Book an Appointment</a></li>
                     <li class="in"><a href="#">SuperPet Products</a></li>
                     <li><a href="#">Adopt your SuperPet</a></li>
@@ -87,11 +87,8 @@
                             </form>
                         </div>  
                     </div>
-                </div>                
-            </div>
-
-            <div class="products-list">
-                <!-- USE PHP TO SHOW PRODUCTS HERE -->
+                </div>  
+                
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
@@ -146,11 +143,8 @@
                             </form>
                         </div>  
                     </div>
-                </div>                
-            </div>
+                </div> 
 
-            <div class="products-list">
-                <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
@@ -205,11 +199,11 @@
                             </form>
                         </div>  
                     </div>
-                </div>                
+                </div>    
             </div>
-
+        </div>
         <footer>
-            <img src="../assets/images/Letter_Logo.png" alt="">
+            <img src="../assets/images/Letter_Logo.png" alt="" width="200">
             <p>©2023 SUPERPET by SUPERTEAM STUDIOS. All Rights Reserved.</p>
          </footer>
 

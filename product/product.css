@@ -111,7 +111,6 @@ body {
 .product-page {
     margin-top: 50px;
     width: 100%;
-    height: 100vh;
     padding: 20px;
 }
 
@@ -163,6 +162,7 @@ body {
 
 .product {
     width: 230px;
+    margin: 20px;
 }
 
 .product-img {
@@ -331,24 +331,25 @@ body {
 }
 
 footer {
-    background-color:#0B2027;
-    font-family: 'MontserratAltMed';
-    font-size: 12px;
-    font-weight: 800;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-    margin: 100px 0 0 -10px;
+    width: 100%;
+    height: 30vh;
+    padding: 20px;
+    background-color: #0B2027;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 footer p {
     color: #F1DABF;
-    padding-top: 20px;
-}
-
-footer img {
-    width: 23%;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
 }
 
 /* footer product-footer img {
