@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Cubao";
+    src: url("../assets/fonts/Cubao_Free_Regular.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltXp";
+    src: url("../assets/fonts/MontserratAlternates-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltMed";
+    src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
+body {
+    background-color: #F1DABF;
+}
+
+.container {
+    width: 100%;
+    background-color: #F1DABF;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFB30F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px 15px 20px;
+    z-index: 1;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li,  .nav-links a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 12px;
+    font-family: 'MontserratAltMed';
+}
+
+.nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #0B2027;
+}
+
+#menu-nav-btn {
+    color: #0B2027;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 8%;
+    z-index: 3;
+    width: 100%;
+    padding: 20px;
+    background-color: #FFB30F;
+    display: none;
+}
+
+.mobile-nav ul {
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.in {
+    background-color: #D34E24;
+    border: 2px solid #0B2027;
+    border-radius: 20px;
+    padding: 5px;
+    color: #F1DABF;
+}
+
+.main-appointment-container {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.appointment-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-title img {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    width: 50%;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2978A0;
+    padding: 20px 20px 40px 20px;
+}
+
+.form img {
+    margin-bottom: 30px;
+}
+
+.form form {
+    width: 80%;
+}
+
+.inputs {
+    width: 80%;
+}
+
+.txt-input{
+    outline: none;
+    border: 2px solid #0B2027;
+    background-color: #F1DABF;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+}
+
+.input-label {
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    color: #F1DABF;
+    margin-bottom: 5px;
+}
+
+.radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    color: #F1DABF;
+}
+
+.radio-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80px;
+    margin: 5px;
+}
+
+input[name="comments"]{
+    outline: none;
+    border: 2px solid #0B2027;
+    background-color: #F1DABF;
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+}
+
+.submit-btn {
+    width: 50%;
+}
+
+.submit-btn input {
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    font-family: 'MontserratAltMed';
+    background-color: #D34E24;
+    color: white;
+    font-size: 12px;
+}
+
+@media (max-width: 870px) {
+    #menu-nav-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    
+    .mobile-nav nav {
+        display: block;
+    }
+    
+    .mobile-nav{
+        display: none;
+    }
+
+    .mobile-nav.open {
+        display: block;
+    }
+
+    .announcement p {
+        font-size: 10px;
+    }
+
+    .sub-desc {
+        font-size: 12px;
+        width: 60%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow: hidden;
+    }    
+
+    .banner-txt {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .banner img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .product-header img {
+        width: 80%;
+    }
+
+    .appointment-title img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 877px) {
+    .banner-txt {
+        width: 50%;
+        left: 25%;
+        right: 15%;
+    }
+
+    .sub-desc {
+        width: 100%;
+    }
+
+    .appointment-btn {
+        font-size: 10px;
+    }
+
+    .sticker-title {
+        font-size: 25px;
+     }
+
+    .form, .submit-btn {
+        width: 80%;
+    }
+}
+
+@media (max-width: 420px) {
+    .banner-txt {
+        margin-top: 20px;
+        width: 90%;
+        left: 5%;
+        right: 10%;
+    }
+
+    .product-header img {
+        width: 100%;
+    }
+
+    .product-header p {
+        width: 100%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .img-header {
+        width: 100%;
+    }
+
+    .con-header {
+        width: 80%;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #0B2027;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer p {
+    color: #F1DABF;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+}
