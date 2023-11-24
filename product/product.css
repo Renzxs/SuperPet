@@ -250,7 +250,22 @@ body {
 
 #add-to-cart {
     background-color: #D34E24;
-}      
+}   
+
+.mobile-nav {
+    position: fixed;
+    top: 8%;
+    z-index: 3;
+    width: 100%;
+    padding: 20px;
+    background-color: #FFB30F;
+    display: none;
+}
+
+.mobile-nav ul {
+    flex-direction: column;
+    gap: 30px;
+}
 
 @media (max-width: 870px) {
     #menu-nav-btn {
@@ -259,6 +274,19 @@ body {
 
     nav {
         display: none;
+    }
+
+    
+    .mobile-nav nav {
+        display: block;
+    }
+    
+    .mobile-nav{
+        display: none;
+    }
+
+    .mobile-nav.open {
+        display: block;
     }
 
     .announcement p {
