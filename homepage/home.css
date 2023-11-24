@@ -435,8 +435,6 @@ footer p {
         display: block;
     }
 
-
-
     .announcement p {
         font-size: 10px;
     }
@@ -475,8 +473,8 @@ footer p {
 
 @media (max-width: 877px) {
     .banner-txt {
-        width: 50%;
-        left: 25%;
+        width: 60%;
+        left: 20%;
         right: 15%;
     }
 
@@ -495,11 +493,12 @@ footer p {
 
 @media (max-width: 420px) {
     .banner-txt {
-        margin-top: 20px;
-        width: 90%;
-        left: 5%;
+        margin-top: 10px;
+        width: 80%;
+        left: 10%;
         right: 10%;
     }
+    
 
     .product-header img {
         width: 100%;

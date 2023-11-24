@@ -7,7 +7,7 @@
     <link rel="icon" href="../assets/images/admin_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="product.css">
-    <script src="Home.js" defer></script>
+    <script src="Product.js" defer></script>
 </head>
 <body>  
     <div class="container">
@@ -31,9 +31,9 @@
         <div class="mobile-nav">
             <nav>
                 <ul class="nav-links">
-                    <li class="in"><a href="#">Home</a></li>
+                    <li ><a href="#">Home</a></li>
                     <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
-                    <li><a href="../product/product.php">SuperPet Products</a></li>
+                    <li class="in"><a href="../product/product.php">SuperPet Products</a></li>
                     <li><a href="#">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
@@ -100,10 +100,7 @@
                         </div>  
                     </div>
                 </div>
-            </div>
 
-            <div class="products-list">
-                <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
@@ -159,10 +156,7 @@
                         </div>  
                     </div>
                 </div>
-            </div>
 
-            <div class="products-list">
-                <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
@@ -219,9 +213,6 @@
                     </div>
                 </div>
             </div>
-
-            
-
         </div>
             
         <footer>
