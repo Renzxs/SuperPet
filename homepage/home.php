@@ -47,7 +47,7 @@
             <div class="banner-txt">
                 <img src="../assets/images/banner-text.png" alt="" width="100">
                 <p class="sub-desc"><strong>Discover SuperPet, where adorable meets superhero.</strong> Elevate your pet's well-being with our whimsical, expert care!</p>
-                <a href="#" class="appointment-btn">BOOK AN APPOINTMENT</a>
+                <a href="../appointmentpage/appointment.php" class="appointment-btn">BOOK AN APPOINTMENT</a>
             </div>
         </div>
         <div class="stickers">
@@ -77,7 +77,7 @@
             <div class="product-header">
                 <img src="../assets/images/superpet-product.png" alt="" width="500">
                 <p class="desc"><strong>Explore SuperPet's curated selection of premium products.</strong> tailored to enhance your pet's joy and well-being.</p>
-                <a href="#" class="show-now-btn">SHOP NOW!</a>
+                <a href="../product/product.php" class="show-now-btn">SHOP NOW!</a>
             </div>
             <div class="products-list">
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
