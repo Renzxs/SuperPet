@@ -96,7 +96,7 @@
                     <div class="product-img">
                         <div class="product-categ-chip">On Sale</div>
                         <div class="img">
-                            <img src="../assets/images/itch.png" alt="" width="250">
+                            <img src="../assets/images/4.png" alt="" width="250">
                         </div>
                     </div>
                     <div class="product-desc">
@@ -115,10 +115,10 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/eagle.png" alt="" width="250">
+                        <img src="../assets/images/Frame 1.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Eagle Mountain</h1>
+                        <h1 class="name">Eagle</h1>
                         <p class="price">$ 39.00</p>
                         <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
