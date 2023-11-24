@@ -66,14 +66,14 @@
                 </div>
 
                 <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip ">Best Seller</div>
+                    <div class="limited-img">
+                        <div class="limited-chip">Limited Edition</div>
                         <img src="../assets/images/2.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">Wagg (Puppy)</h1>
+                        <p class="price">$ 49.00</p>
+                        <p class="desc">Tail-wagging nutrition tailored for your growing and playful puppy.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -89,9 +89,9 @@
                         <img src="../assets/images/3.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">Whole Life</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -106,15 +106,15 @@
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip">Best Seller</div>
+                        <div class="product-categ-chip">On Sale</div>
                         <div class="img">
                             <img src="../assets/images/4.png" alt="" width="250">
                         </div>
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">IS Chewies</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -126,13 +126,13 @@
 
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip ">Best Seller</div>
+                        <div class="product-categ-chip ">On Sale</div>
                         <img src="../assets/images/5.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">EagleMountain</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -148,9 +148,9 @@
                         <img src="../assets/images/6.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">Percuro</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -165,15 +165,15 @@
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip">Best Seller</div>
+                        <div class="product-categ-chip">On Sale</div>
                         <div class="img">
                             <img src="../assets/images/7.png" alt="" width="250">
                         </div>
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">Dinovite</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -185,13 +185,13 @@
 
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip ">Best Seller</div>
+                        <div class="product-categ-chip ">On Sale</div>
                         <img src="../assets/images/8.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">Lifetime</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -207,9 +207,9 @@
                         <img src="../assets/images/9.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
+                        <h1 class="name">More</h1>
+                        <p class="price">$ 39.00</p>
+                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
