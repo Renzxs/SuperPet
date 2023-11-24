@@ -378,6 +378,7 @@ body {
 
 footer {
     width: 100%;
+    height: 30vh;
     padding: 20px;
     background-color: #0B2027;
     color: #F1DABF;
@@ -397,6 +398,22 @@ footer p {
     text-align: center;
 }
 
+.mobile-nav {
+    position: fixed;
+    top: 8%;
+    z-index: 3;
+    width: 100%;
+    padding: 20px;
+    background-color: #FFB30F;
+    display: none;
+}
+
+.mobile-nav ul {
+    flex-direction: column;
+    gap: 30px;
+}
+
+
 @media (max-width: 870px) {
     #menu-nav-btn {
         display: block;
@@ -405,6 +422,20 @@ footer p {
     nav {
         display: none;
     }
+
+    .mobile-nav nav {
+        display: block;
+    }
+    
+    .mobile-nav{
+        display: none;
+    }
+
+    .mobile-nav.open {
+        display: block;
+    }
+
+
 
     .announcement p {
         font-size: 10px;

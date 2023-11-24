@@ -7,6 +7,7 @@
     <link rel="icon" href="../assets/images/admin_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="home.css">
+    <script src="Home.js" defer></script>
 </head>
 <body>  
     <div class="container">
@@ -16,8 +17,8 @@
             <nav>
                 <ul class="nav-links">
                     <li class="in"><a href="#">Home</a></li>
-                    <li><a href="#">Book an Appointment</a></li>
-                    <li><a href="#">SuperPet Products</a></li>
+                    <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
+                    <li><a href="../product/product.php">SuperPet Products</a></li>
                     <li><a href="#">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
@@ -26,6 +27,18 @@
                 <i class="fa-solid fa-circle-user"></i>
             </div>
         </div>
+
+        <div class="mobile-nav">
+            <nav>
+                <ul class="nav-links">
+                    <li class="in"><a href="#">Home</a></li>
+                    <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
+                    <li><a href="../product/product.php">SuperPet Products</a></li>
+                    <li><a href="#">Adopt your SuperPet</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="announcement">
             <p>Christmas Sale   •  Get 50% OFF for your first order! </p>
         </div>

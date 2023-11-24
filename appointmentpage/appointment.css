@@ -69,189 +69,6 @@ body {
     cursor: pointer;
 }
 
-.banner {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-}
-
-.banner-txt {
-    position: absolute;
-    top: -5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.banner-txt img {
-    width: 50%;
-}
-
-.sub-desc {
-    font-family: 'MontserratAltMed';
-    text-align: center;
-    width: 30%;
-    color: #F1DABF;
-}
-
-.in {
-    background-color: #D34E24;
-    border: 2px solid #0B2027;
-    border-radius: 20px;
-    padding: 5px;
-    color: #F1DABF;
-}
-
-.product-page {
-    margin-top: 50px;
-    width: 100%;
-    padding: 20px;
-}
-
-.product-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.product-header p {
-    width: 60%;
-    text-align: center;
-    font-family: "MontserratAltMed";
-    font-size: 12px;
-}
-
-.product-header img {
-    width: 50%;
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.show-now-btn {
-    text-decoration: none;
-    font-family: "MontserratAltXp";
-    color: #F1DABF;
-    margin-top: 20px;
-    padding: 5px 10px 5px 10px;
-    border-radius: 10px;
-    font-size: 12px;
-    border-bottom: 8px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    background-color: #D34E24;
-}
-
-.products-list {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    flex-wrap: wrap;
-}
-
-.product {
-    width: 230px;
-    margin: 20px;
-}
-
-.product-img {
-    background-color: #D34E24;
-    width: 250px;
-    height: 350px;
-    padding: 10px;
-    border-bottom: 8px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.product-img .img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.limited-product {
-    background-color: #FFB30F;
-}
-
-.limited-product-chip {
-    background-color: #D34E24;
-}
-
-.product-img .product-categ-chip {
-    background-color: #FFB30F;
-    width: fit-content;
-    padding: 5px 15px 5px 15px;
-    font-family: "MontserratAltXp";
-    color: #0B2027;
-    font-size: 12px;
-    border-radius: 20px;
-    border: 2px solid #0B2027;
-    margin-bottom: 10px;
-}
-
-.product-desc {
-    margin-top: 10px;
-}
-
-.product-desc .name{
-    font-family: 'Cubao';
-    color: #0B2027;
-}
-
-.product-desc .price {
-    font-family: 'MontserratAltXp';
-    color: #0B2027;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.product-desc .desc {
-    font-family: 'MontserratAltMed';
-    color: #0B2027;
-    font-size: 11px;
-}
-
-.product-button {
-    margin-top: 20px;
-}
-
-.product-button input{
-    outline: none;
-    border-bottom: 8px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    padding: 5px 15px 5px 15px;
-    border-radius: 10px;
-    font-family: 'MontserratAltMed';
-    font-size: 12px;
-    font-weight: 800;
-}
-
-#buy {
-    background-color: #FFB30F;
-}
-
-#add-to-cart {
-    background-color: #D34E24;
-}   
-
 .mobile-nav {
     position: fixed;
     top: 8%;
@@ -265,6 +82,137 @@ body {
 .mobile-nav ul {
     flex-direction: column;
     gap: 30px;
+}
+
+
+.in {
+    background-color: #D34E24;
+    border: 2px solid #0B2027;
+    border-radius: 20px;
+    padding: 5px;
+    color: #F1DABF;
+}
+
+.main-appointment-container {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.appointment-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-title img {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    width: 50%;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2978A0;
+    padding: 20px 20px 40px 20px;
+}
+
+.form img {
+    margin-bottom: 30px;
+}
+
+.form form {
+    width: 80%;
+}
+
+.inputs {
+    width: 80%;
+}
+
+.txt-input{
+    outline: none;
+    border: 2px solid #0B2027;
+    background-color: #F1DABF;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+}
+
+.input-label {
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    color: #F1DABF;
+    margin-bottom: 5px;
+}
+
+.radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    color: #F1DABF;
+}
+
+.radio-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80px;
+    margin: 5px;
+}
+
+input[name="comments"]{
+    outline: none;
+    border: 2px solid #0B2027;
+    background-color: #F1DABF;
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+}
+
+.submit-btn {
+    width: 50%;
+}
+
+.submit-btn input {
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    font-family: 'MontserratAltMed';
+    background-color: #D34E24;
+    color: white;
+    font-size: 12px;
 }
 
 @media (max-width: 870px) {
@@ -319,6 +267,10 @@ body {
     .product-header img {
         width: 80%;
     }
+
+    .appointment-title img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 877px) {
@@ -339,6 +291,10 @@ body {
     .sticker-title {
         font-size: 25px;
      }
+
+    .form, .submit-btn {
+        width: 80%;
+    }
 }
 
 @media (max-width: 420px) {
@@ -356,12 +312,25 @@ body {
     .product-header p {
         width: 100%;
     }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .img-header {
+        width: 100%;
+    }
+
+    .con-header {
+        width: 80%;
+    }
 }
 
 footer {
     width: 100%;
     height: 30vh;
     padding: 20px;
+    margin-top: 30px;
     background-color: #0B2027;
     color: #F1DABF;
     font-family: 'MontserratAltXp';
@@ -379,22 +348,3 @@ footer p {
     font-weight: 800;
     text-align: center;
 }
-
-/* footer product-footer img {
-    width: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-footer product-footer p {
-    width: 60%;
-    text-align: center;
-    font-family: "MontserratAltMed";
-    font-size: 12px;
-    color:#0B2027;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
