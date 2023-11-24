@@ -124,7 +124,7 @@
                 <div class="product">
                     <div class="product-img">
                         <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/Frame 1.png" alt="" width="250">
+                        <img src="../assets/images/5.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
                         <h1 class="name">Eagle</h1>
