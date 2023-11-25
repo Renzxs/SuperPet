@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Cubao";
+    src: url("../assets/fonts/Cubao_Free_Regular.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltXp";
+    src: url("../assets/fonts/MontserratAlternates-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "MontserratAltMed";
+    src: url("../assets/fonts/MontserratAlternates-Medium.ttf");
+}
+
+body {
+    background-color: #F1DABF;
+}
+
+.container {
+    width: 100%;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFB30F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px 15px 20px;
+    z-index: 5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li,  .nav-links a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 12px;
+    font-family: 'MontserratAltMed';
+}
+
+.nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #0B2027;
+}
+
+#menu-nav-btn {
+    color: #0B2027;
+    display: none;
+    cursor: pointer;
+}
+
+.in {
+    background-color: #D34E24;
+    border: 2px solid #0B2027;
+    border-radius: 20px;
+    padding: 5px;
+    color: #F1DABF;
+}
