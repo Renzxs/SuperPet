@@ -16,10 +16,10 @@
             <img src="../assets/images/Letter_Logo.png" alt="" width="150px">
             <nav>
                 <ul class="nav-links">
-                    <li class="in"><a href="#">Home</a></li>
+                    <li class="in"><a href="../homepage/home.php">Home</a></li>
                     <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
                     <li><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
             <div class="nav-icon-btns">
@@ -31,10 +31,10 @@
         <div class="mobile-nav">
             <nav>
                 <ul class="nav-links">
-                    <li class="in"><a href="#">Home</a></li>
+                    <li class="in"><a href="../homepage/home.php">Home</a></li>
                     <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
                     <li><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
         </div>
@@ -146,14 +146,14 @@
                 <div class="adopt-text">
                     <img src="../assets/images/ADOPT YOUR SUPERPET.png" alt="" width="300">
                     <p class="adopt-desc"><strong>Discover furry friends waiting to share love, joy, and companionship.</strong> Make a lifelong connection with your perfect match today!</p>
-                    <a href="#" class="adopt-now">LET'S ADOPT NOW!</a>
+                    <a href="../adoptpage/adoptpage.php" class="adopt-now">LET'S ADOPT NOW!</a>
                 </div>
             </div>
             <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
         </div>            
         <footer>
             <img src="../assets/images/Letter_Logo.png" alt="" width="200">
-            <p>©2023 SUPERPET by SUPERTEAM STUDIO. All Rights Reserved.</p>
+            <p>©2023 SUPERPET by SUPERTEAM STUDIOS. All Rights Reserved.</p>
          </footer>
     </div>
 </body>
