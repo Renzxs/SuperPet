@@ -244,13 +244,13 @@ body {
     align-items: center;
 }
 
-.limited-product {
+/* .limited-product {
     background-color: #FFB30F;
 }
 
 .limited-product-chip {
     background-color: #D34E24;
-}
+} */
 
 .product-img .product-categ-chip {
     background-color: #FFB30F;
@@ -283,7 +283,7 @@ body {
 .product-desc .desc {
     font-family: 'MontserratAltMed';
     color: #0B2027;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .product-button {
@@ -469,12 +469,6 @@ footer p {
     .pets-bg {
         display: none;
     }
-}
-
-.logout {
-    background-color: transparent;
-    outline: none;
-    border: none;
 }
 
 @media (max-width: 877px) {
