@@ -7,6 +7,8 @@
      // DELETE USER
      if(isset($_POST['delete']) && isset($_POST['user_id'])) {
         $user_id = $_POST['user_id'];
+        $delete_query = "DELETE FROM appointment_tbl WHERE user_id = '$user_id'";
+        mysqli_query($conn, $delete_query);
         $delete_query = "DELETE FROM users_tbl WHERE id = '$user_id'";
         mysqli_query($conn, $delete_query);
     }

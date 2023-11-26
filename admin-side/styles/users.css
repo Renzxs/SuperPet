@@ -137,7 +137,6 @@ body {
     width: 100%;
     background-color: white;
     border: 2px solid #0B2027;
-
 }
 
 .thead td {
@@ -319,6 +318,135 @@ table form {
     cursor: pointer;
 }
 
+.appointments {
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.appoint {
+    width: 600px;
+    background-color: #2978A0;
+    border-radius: 20px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.appoint .appoint-info {
+    width: 100%;
+    background-color: #D34E24;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.appoint-info .schedule {
+    text-align: center;
+    width: 30%;
+    background-color: #FFB30F;
+    border-radius: 10px;
+    border: 2px solid #0B2027;
+    font-family: 'Cubao';
+    padding: 20px 10px 20px 10px;
+}
+
+.schedule h1, .schedule h3 {
+    font-weight: 100;
+}
+
+.schedule h1 {
+    font-size: 20px;
+}
+
+.user-info {
+    font-family: 'MontserratAltMed';
+    color: #F1DABF;
+}
+
+.user-info h3 {
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltXp';
+}
+
+.user-info p {
+    font-size: 12px;
+}
+
+.appoint .input {
+    font-family: 'MontserratAltMed';
+    color: #F1DABF;
+    font-size: 12px;
+    width: 100%;
+}
+.input form {
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #F1DABF;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+}
+
+.input .btns {
+    outline: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btns input {
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px 10px 5px 10px;
+    background-color: #F1DABF;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'MontserratAltMed';
+}
+
+.btns input[name="reject"] {
+    background-color: #AF1818;
+    color: #F1DABF;
+}
+
+.btns input[name="approve"] {
+    background-color: #11AD2A;
+    color: #F1DABF;
+}
 
 @media (max-width: 890px) {
     table tr, td{
@@ -337,6 +465,23 @@ table form {
     .edit-modal h1 {
         font-size: 20px;
     }
+
+    
+    .appoint {
+        width: 100%;
+    }
+
+    
+    .appoint-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .appoint-info .schedule {
+        width: 100%;
+        
+    }
+
 }
 
 @media (max-width: 713px) {
