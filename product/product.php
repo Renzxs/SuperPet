@@ -19,7 +19,7 @@
                     <li ><a href="../homepage/home.php">Home</a></li>
                     <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
                     <li class="in"><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
             <div class="nav-icon-btns">
@@ -31,10 +31,10 @@
         <div class="mobile-nav">
             <nav>
                 <ul class="nav-links">
-                    <li ><a href="#">Home</a></li>
+                    <li ><a href="../homepage/home.php">Home</a></li>
                     <li><a href="../appointmentpage/appointment.php">Book an Appointment</a></li>
                     <li class="in"><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
         </div>
