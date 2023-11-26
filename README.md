@@ -30,6 +30,11 @@ FOR ICONS:
 <i class="fa-solid fa-house"></i> <!--THIS WILL SHOW A SOLID ICON OF A HOUSE -->
 ```
 
+#### MYSQL TESTING
+- In order to test this system in your local computer, place the folder "superpet_db" inside your computer's XAMPP mysql folder. Here the mysql directory:
+```
+C:\xampp\mysql\data // Paste this in your file explorer
+```
 
 - - - -
 🎓 Academic Honesty
