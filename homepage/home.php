@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    
+
+    if(isset($_POST["logout"])) {
+        session_destroy();
+        header("Location: ../login-register/login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +36,11 @@
             <div class="nav-icon-btns">
                 <i class="fa-solid fa-shopping-cart"></i>
                 <i class="fa-solid fa-circle-user"></i>
+                <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <button type="submit" class="logout" name="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
+                </form>
             </div>
         </div>
 
@@ -158,3 +174,11 @@
     </div>
 </body>
 </html>
+
+<?php
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"]; 
+?>

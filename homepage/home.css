@@ -471,6 +471,12 @@ footer p {
     }
 }
 
+.logout {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
 @media (max-width: 877px) {
     .banner-txt {
         width: 60%;

@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"];
+
+    require_once '../config/mysql-connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,3 +110,12 @@
     </div>
 </body>
 </html>
+
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(isset($_POST["submit"])) {
+            // $insert_query = "INSERT INTO appointment_tbl(user_id, first_name, last_name, phone, pet_name, type_of_pet, date, time, comments) 
+            //                  VALUES ();"
+        }
+    }
+?>

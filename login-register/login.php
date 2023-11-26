@@ -52,10 +52,13 @@
                                         $row = mysqli_fetch_assoc($result);
                                         if($row['email'] === $email && $row['password'] === $password && $row['user_role'] === "customer"){
                                             // NAVIGATE TO THE NEXT PAGE
+                                            $_SESSION["user_id"] = $row["id"];
                                             $_SESSION["username"] = $row['username'];
                                             $_SESSION["password"] =$row['password'];
                                             $_SESSION["email"] = $row['email'];
                                             $_SESSION["address"] = $row['address'];
+
+                                            header("Location: ../homepage/home.php");
 
                                             // NAVIGATE USER TO HOME PAGE 
                                             mysqli_close($conn);
