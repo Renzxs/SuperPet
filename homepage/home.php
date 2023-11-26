@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    
+
+    if(isset($_POST["logout"])) {
+        session_destroy();
+        header("Location: ../login-register/login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +36,11 @@
             <div class="nav-icon-btns">
                 <i class="fa-solid fa-shopping-cart"></i>
                 <i class="fa-solid fa-circle-user"></i>
+                <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <button type="submit" class="logout" name="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
+                </form>
             </div>
         </div>
 
@@ -103,13 +119,13 @@
 
                 <div class="product">
                     <div class="product-img">
-                        <div class="product-categ-chip">Limited Edition</div>
+                        <div class="product-categ-chip ">Limited Edition</div>
                         <img src="../assets/images/2.png" alt="" width="250">
                     </div>
                     <div class="product-desc">
-                        <h1 class="name">Wagg (Puppy)</h1>
-                        <p class="price">$ 49.00</p>
-                        <p class="desc">Tail-wagging nutrition tailored for your growing and playful puppy.</p>
+                        <h1 class="name">Woofy</h1>
+                        <p class="price">$ 29.00</p>
+                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
                         <div class="product-button">
                             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
@@ -158,3 +174,11 @@
     </div>
 </body>
 </html>
+
+<?php
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"]; 
+?>
