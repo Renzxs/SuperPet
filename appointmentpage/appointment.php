@@ -29,7 +29,7 @@
                     <li><a href="../homepage/home.php">Home</a></li>
                     <li class="in"><a href="#">Book an Appointment</a></li>
                     <li><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
             <div class="nav-icon-btns">
@@ -44,7 +44,7 @@
                     <li><a href="../homepage/home.php">Home</a></li>
                     <li class="in"><a href="#">Book an Appointment</a></li>
                     <li><a href="../product/product.php">SuperPet Products</a></li>
-                    <li><a href="#">Adopt your SuperPet</a></li>
+                    <li><a href="../adoptpage/adoptpage.php">Adopt your SuperPet</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,10 +76,10 @@
                     <img src="../assets/images/appointment-details.png" alt="" width="200" class="img-header">
                     <div class="inputs">
                         <p class="input-label">Appointment Date</p>
-                        <input type="date" name="firstname" id="firstname" class="txt-input">
+                        <input type="date" name="date" id="date" class="txt-input">
                         <div class="radio">
                             <div class="radio-time">
-                                <input type="radio" name="time" id="morning" value="morning">
+                                <input type="radio" name="time" id="morning" value="morning" checked>
                                 <label for="morning">Morning</label>
                             </div>
                             <div class="radio-time">
@@ -101,6 +101,34 @@
                     <input type="submit" value="SUBMIT" name="submit">
                 </div>
             </form>
+            <?php
+                if($_SERVER["REQUEST_METHOD"] == "POST"){
+                    if(isset($_POST["submit"])) {
+                        if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["phone"]) || empty($_POST["email"]) || empty($_POST["date"]) || empty($_POST["time"]) || empty($_POST["comments"])) 
+                        {
+                            echo "<p class='error-msg'>Please do not leave textboxes empty.</p>";
+                        } 
+                        else {
+                            $firstname = htmlentities($_POST["firstname"]);
+                            $lastname = htmlentities($_POST["lastname"]);
+                            $phone = htmlentities($_POST["phone"]);
+                            $email = htmlentities($_POST["email"]);
+                            $petname = htmlentities($_POST["pet-name"]);
+                            $pet_type = htmlentities($_POST["pet-type"]);
+                            $date = htmlentities($_POST["date"]);
+                            $time = htmlentities($_POST["time"]);
+                            $comments = htmlentities($_POST["comments"]);
+
+                            $insert_query = "INSERT INTO appointment_tbl(user_id, first_name, last_name, phone, pet_name, type_of_pet, date, time, comments) 
+                                             VALUES ($userId, '$firstname', '$lastname', $phone, '$petname', '$pet_type', '$date', '$time', '$comments')";
+
+                            mysqli_query($conn, $insert_query);
+                            echo "<p class='success-msg'>Thank you for booking an appointment, Just wait and we will reponse you as much as possible.</p>";
+                            mysqli_close($conn);
+                        }
+                    }
+                }
+            ?>
         </div>
 
         <footer>
@@ -110,12 +138,3 @@
     </div>
 </body>
 </html>
-
-<?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(isset($_POST["submit"])) {
-            // $insert_query = "INSERT INTO appointment_tbl(user_id, first_name, last_name, phone, pet_name, type_of_pet, date, time, comments) 
-            //                  VALUES ();"
-        }
-    }
-?>

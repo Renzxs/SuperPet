@@ -123,6 +123,23 @@ form {
     gap: 20px;
 }
 
+.error-msg {
+    font-family: "MontserratAltXp";
+    color: rgb(162, 36, 36);
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.success-msg {
+    font-family: "MontserratAltXp";
+    color: green;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    width: 80%;
+}
+
 .form {
     width: 50%;
     border-bottom: 8px solid black;
