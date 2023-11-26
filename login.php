@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../config/mysql-connection.php';
+    require_once 'config/mysql-connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,22 +8,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SuperPet | Login</title>
-        <link rel="stylesheet" href="styles/login.css">
-        <link rel="icon" href="../assets/images/superpet_logo.png">
+        <link rel="stylesheet" href="login-register/styles/login.css">
+        <link rel="icon" href="assets/images/superpet_logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="container">
             <div class="super-pet-desc">
-                <img src="../assets/images/superpet_logo.png" alt="">
+                <img src="assets/images/superpet_logo.png" alt="">
                 <p>Welcome to SuperPet. Register with SuperPet for exclusive access to pet care tips, promotions, and personalized services. Join us in celebrating your pet's well-being!</p>
             </div>
             <div class="container-login">
                <div class="login-form">
                     <div class="links">
-                        <a href="register.php" class="link">NEW USER</a>
+                        <a href="login-register/register.php" class="link">NEW USER</a>
                         <a href="#" class="link in-log">EXISTING USER</a>
-                        <a href="../admin-side/admin-login.php" class="link">ADMIN</a>
+                        <a href="admin-side/admin-login.php" class="link">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <p class="input-label">EMAIL</p>
@@ -58,7 +58,7 @@
                                             $_SESSION["email"] = $row['email'];
                                             $_SESSION["address"] = $row['address'];
 
-                                            header("Location: ../homepage/home.php");
+                                            header("Location: homepage/home.php");
 
                                             // NAVIGATE USER TO HOME PAGE 
                                             mysqli_close($conn);

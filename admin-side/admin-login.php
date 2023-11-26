@@ -22,7 +22,7 @@
                <div class="login-form">
                     <div class="links">
                         <a href="../login-register/register.php" class="link">NEW USER</a>
-                        <a href="../login-register/login.php" class="link">EXISTING USER</a>
+                        <a href="../login.php" class="link">EXISTING USER</a>
                         <a href="#" class="link in-log">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
