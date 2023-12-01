@@ -257,7 +257,6 @@ footer p {
     }
 
 
-
     .announcement p {
         font-size: 10px;
     }
@@ -285,7 +284,7 @@ footer p {
         width: 100%;
     }
 
-    .product-header img {
+    .pet-header img {
         width: 80%;
     }
 
@@ -312,6 +311,11 @@ footer p {
     .sticker-title {
         font-size: 25px;
      }
+
+     .pet-header img {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 420px) {
@@ -334,6 +338,9 @@ footer p {
         width: 80%;
     }
 
+    .pet-header img {
+        width: 80%;
+    }
 
     .adopt-desc {
         width: 80%;

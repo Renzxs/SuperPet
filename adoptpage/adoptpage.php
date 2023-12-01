@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"];
+
+    require_once '../config/mysql-connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,117 +56,33 @@
             </div>
             <div class="pets-list">
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet1.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Whisker</h1>
-                        <p class="breed">Young • Corgi</p>
-                        <p class="desc">Adopt a charming Corgi: joy, loyalty, and endless tail wiggles.</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
+                <?php
+                    $get_pets = "SELECT * FROM pets_tbl";
+                    $result = mysqli_query($conn, $get_pets);
 
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet2.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Luna</h1>
-                        <p class="breed">Young • Persian</p>
-                        <p class="desc">Embrace elegance with a Persian cat: grace, charm, and furry sophistication.</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet3.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Max</h1>
-                        <p class="breed">Young • Hamster</p>
-                        <p class="desc">Tiny ball of fur, big heart. Adopt a hamster today!</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet4.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Bella</h1>
-                        <p class="breed">Young • Pug</p>
-                        <p class="desc">wrinkles, snuggles, and boundless canine charm awaits your heart.</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet5.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Oliver</h1>
-                        <p class="breed">Young • Golden Retriever</p>
-                        <p class="desc">Embrace joy with a golden retriever pup—love, loyalty, and playfulness await.</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="pet">
-                    <div class="pet-img">
-                        <div class="img">
-                            <img src="../assets/images/pet6.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="pet-desc">
-                        <h1 class="name">Nala</h1>
-                        <p class="breed">Young • Siamese</p>
-                        <p class="desc">Siamese charm: Adopt grace, intelligence, and a purrfect companion today.</p>
-                        <div class="pet-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                
-
-    
+                    if(mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<div class='pet'>
+                                    <div class='pet-img'>
+                                        <div class='img'>
+                                            <img src='../assets/upload/".$row['pet_photo_url']."'  width='250'>
+                                        </div>
+                                    </div>
+                                    <div class='pet-desc'>
+                                        <h1 class='name'>".$row['pet_name']."</h1>
+                                        <p class='breed'>".$row['pet_age']." • ".$row['pet_breed']. "</p>
+                                        <p class='desc'>".$row['pet_desc']."</p>
+                                        <div class='pet-button'>
+                                            <form action='adoptpage.php' method='post'>
+                                                <input type='hidden' id='pet_id' name='pet_id' value='" . $row['pet_id'] . "'>
+                                                <input type='submit' id='adopt' name='adopt' value='ADOPT NOW'>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>";
+                                }
+                    }
+                ?>
             </div>
         </div>
             
@@ -166,3 +93,13 @@
     </div>
 </body>
 </html>
+
+<?php
+    if(isset($_POST["adopt"]) && isset($_POST["pet_id"]) && isset($userId)){
+        // SEND THESE FOREIGN KEY INTO THE ADOPTION TABLE
+        $petId = $_POST["pet_id"];
+        $insert_query = "INSERT INTO adoption_tbl(user_id, pet_id)
+                         VALUES ($userId, $petId)";
+        mysqli_query($conn, $insert_query);
+    }
+?>

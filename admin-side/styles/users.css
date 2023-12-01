@@ -183,69 +183,6 @@ table form {
     cursor: pointer;
 }
 
-@media (max-width: 890px) {
-    table tr, td{
-        width: 60%;
-        font-size: 8px;
-    }
-
-    table input {
-        font-size: 8px;
-    }
-
-    .header-txt {
-        font-size: 20px;
-    }
-
-    .edit-modal h1 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 713px) {
-    table tr, td{
-        font-size: 4px;
-        padding: 5px;
-    }
-
-    table input {
-        font-size: 4px;
-        padding: 3px;
-    }
-
-    .header-txt {
-        font-size: 15px;
-    }
-
-    .edit-modal h1 {
-        font-size: 15px;
-    }
-} 
-
-@media (max-width: 368px) {
-    table tr, td{
-        font-size: 2px;
-        padding: 3px;
-    }
-
-    table input {
-        font-size: 2px;
-        padding: 3px;
-    }
-
-    .header-txt {
-        font-size: 10px;
-    }
-
-    .edit-modal h1 {
-        font-size: 12px;
-    }
-
-    .edit-modal {
-        width: 80%;
-    }
-} 
-
 .edit-modal {
     position: absolute;
     left: 0;
@@ -292,8 +229,6 @@ table form {
     width: 80%;
     font-family: "MontserratAltMed";
 }
-
-
 
 .edit-modal input[type="button"]{
     outline: none;
@@ -448,6 +383,315 @@ input[type="text"] {
     color: #F1DABF;
 }
 
+#add-new-pet-btn {
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #2978A0;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-new-pet-modal {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: #0B2027;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    color: #F1DABF;
+    display: none;
+}
+
+.add-new-pet-modal .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: #F1DABF;
+    font-family: "Cubao";
+}
+
+.add-new-pet-modal > .header h2 {
+    font-weight: 100;
+}
+
+.add-new-pet-modal form {
+    margin-top: 20px;
+    font-family: 'MontserratALtMed';
+    font-size: 12px;
+}
+
+.input-label {
+    margin-top: 10px;
+}
+
+.radio-btns-age {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.radio-btns-age .radio-age {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#add-btn {
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #2978A0;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pets-container-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.pet-container {
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #2978A0;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pet-info {
+    padding: 10px;
+    outline: none;
+    background-color: #D34E24;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.info .title {
+    font-family: "Cubao";
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.info .sub-title {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.info .desc {
+    width: 200px;
+}
+
+#delete-pet {
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #AF1818;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.error-msg {
+    font-family: "MontserratAltXp";
+    color: rgb(162, 36, 36);
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.success-msg {
+    font-family: "MontserratAltXp";
+    color: green;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.adopt-notification {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.adopt-notification .header {
+    font-family: 'Cubao';
+    font-weight: 100;
+}
+
+.notification-container {
+    margin: 10px;
+    background-color: #2978A0;
+    width: 100%;
+    border-radius: 20px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.notification-container h1{
+    font-family: "MontserratAltXp";
+    color: #F1DABF;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.notification-container form > input[name="reject"]{
+    padding: 10px;
+    outline: none;
+    background-color: #AF1818;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}   
+
+.notification-container form > input[name="approve"]{
+    padding: 10px;
+    outline: none;
+    background-color: #11AD2A;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}  
+
+/* MEDIA QUERIES */
+@media (max-width: 890px) {
+    table tr, td{
+        width: 60%;
+        font-size: 8px;
+    }
+
+    table input {
+        font-size: 8px;
+    }
+
+    .header-txt {
+        font-size: 20px;
+    }
+
+    .edit-modal h1 {
+        font-size: 20px;
+    }
+
+    .pet-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 713px) {
+    table tr, td{
+        font-size: 4px;
+        padding: 5px;
+    }
+
+    table input {
+        font-size: 4px;
+        padding: 3px;
+    }
+
+    .header-txt {
+        font-size: 15px;
+    }
+
+    .edit-modal h1 {
+        font-size: 15px;
+    }
+} 
+
+@media (max-width: 368px) {
+    table tr, td{
+        font-size: 2px;
+        padding: 3px;
+    }
+
+    table input {
+        font-size: 2px;
+        padding: 3px;
+    }
+
+    .header-txt {
+        font-size: 10px;
+    }
+
+    .edit-modal h1 {
+        font-size: 12px;
+    }
+
+    .edit-modal {
+        width: 80%;
+    }
+    .pet-container {
+        width: 100%;
+    }
+} 
+
 @media (max-width: 890px) {
     table tr, td{
         width: 60%;
@@ -508,6 +752,26 @@ input[type="text"] {
         margin-right: 10px;
         display: block;
     }
+
+    .add-new-pet-modal {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: #0B2027;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        color: #F1DABF;
+    }
+
+    .notification-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .notification-container form {
+        margin-top: 20px;
+    }
 } 
 
 @media (max-width: 411px) {
@@ -528,6 +792,18 @@ input[type="text"] {
     .edit-modal {
         width: 80%;
     }
+
+    .add-new-pet-modal {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: #0B2027;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        color: #F1DABF;
+    }
+    
 } 
 
 
