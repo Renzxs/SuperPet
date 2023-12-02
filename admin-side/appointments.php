@@ -74,7 +74,7 @@
 
                 <div class="appointments">
                     <?php
-                        $getAppointments = "SELECT * FROM appointment_tbl WHERE isApproved IS NULL";
+                        $getAppointments = "SELECT * FROM appointment_tbl WHERE isApproved IS NULL ORDER BY appointment_id DESC";
                         $result = mysqli_query($conn, $getAppointments);
 
                         if(mysqli_num_rows($result) > 0) {

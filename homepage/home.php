@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    require_once '../config/mysql-connection.php';
+
     if(isset($_POST["logout"])) {
         session_destroy();
         header("Location: ../login.php");
@@ -95,61 +97,63 @@
             </div>
             <div class="products-list">
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">Best Seller</div>
-                        <div class="img">
-                            <img src="../assets/images/1.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip ">Limited Edition</div>
-                        <img src="../assets/images/2.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/3.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
+                <?php
+                    $get_products = "SELECT * FROM products_tbl LIMIT 3";
+                    $result = mysqli_query($conn, $get_products);
+                    
+                    if(mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            if($row["product_category"] === "Limited Edition"){
+                                echo "
+                                <div class='product '>
+                                    <div class='product-img limited-product'>
+                                        <div class='product-categ-chip'>". $row["product_category"] ."</div>
+                                        <div class='img'>
+                                            <img src='../assets/upload/". $row["product_image_url"]."'width='250'>
+                                        </div>
+                                    </div>
+                                    <div class='product-desc'>
+                                        <h1 class='name'>".$row["product_name"]."</h1>
+                                        <p class='price'>$ ".$row["product_price"]."</p>
+                                        <p class='desc'>".$row["product_description"]."</p>
+                                        <div class='product-button'>
+                                            <form action='shop.php' method='post'>
+                                                <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
+                                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>   
+                                ";
+                            } else {
+                                echo "
+                                <div class='product '>
+                                    <div class='product-img'>
+                                        <div class='product-categ-chip'>". $row["product_category"] ."</div>
+                                        <div class='img'>
+                                            <img src='../assets/upload/". $row["product_image_url"]."'width='250'>
+                                        </div>
+                                    </div>
+                                    <div class='product-desc'>
+                                        <h1 class='name'>".$row["product_name"]."</h1>
+                                        <p class='price'>$ ".$row["product_price"]."</p>
+                                        <p class='desc'>".$row["product_description"]."</p>
+                                        <div class='product-button'>
+                                            <form action='shop.php' method='post'>
+                                                <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
+                                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>   
+                                ";
+                            }
+                            
+                        }
+                    }
+                ?>
             </div>
         </div>
 

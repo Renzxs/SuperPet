@@ -158,6 +158,19 @@ body {
     overflow: hidden;
 }
 
+.limited-chip {
+    background-color: #D34E24;
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
+    font-family: "MontserratAltXp";
+    color: #0B2027;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 2px solid #0B2027;
+    margin-bottom: 10px;
+    color:#F1DABF;
+}
+
 .product-img .img {
     width: 100%;
     display: flex;
@@ -175,19 +188,6 @@ body {
     border-radius: 20px;
     border: 2px solid #0B2027;
     margin-bottom: 10px;
-}
-
-.limited-chip {
-    background-color: #D34E24;
-    width: fit-content;
-    padding: 5px 15px 5px 15px;
-    font-family: "MontserratAltXp";
-    color: #0B2027;
-    font-size: 12px;
-    border-radius: 20px;
-    border: 2px solid #0B2027;
-    margin-bottom: 10px;
-    color:#F1DABF;
 }
 
 .product-desc {

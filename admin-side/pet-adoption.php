@@ -11,15 +11,21 @@
     }
 
     // DELETE
-    if(isset($_POST['delete']) && isset($_POST['pet_id'])) {
+    if(isset($_POST['delete']) && isset($_POST['pet_id']) && isset($_POST["pet_img"])) {
         $pet_id = $_POST['pet_id'];
+        $pet_img = $_POST["pet_img"];
+
+        unlink("../assets/upload/".$pet_img."");
+
         $delete_query = "DELETE FROM adoption_tbl WHERE pet_id = '$pet_id'";
         mysqli_query($conn, $delete_query);
 
         $delete_query = "DELETE FROM pets_tbl WHERE pet_id = '$pet_id'";
         mysqli_query($conn, $delete_query);
         
+
         // DELETE THE PHOTO IN THE DATABASE AND ALSO IN THE PATH FOLDER
+
     }
 
     if(isset($_POST['reject']) && isset($_POST["adoption_id"])){
@@ -126,7 +132,7 @@
                             $img_error = $_FILES["pet-photo"]["error"];
 
                             if($img_error === 0) {
-                                if($imgsize > 125000){
+                                if($imgsize > 625000){
                                     echo "<p class='error-msg'>The file size is too big.</p>";
                                 }   
                                 else {
@@ -171,7 +177,7 @@
 
             <div class="adopt-notification">
                 <?php
-                    $get_adoption = "SELECT * FROM adoption_tbl WHERE status IS NULL";
+                    $get_adoption = "SELECT * FROM adoption_tbl WHERE status IS NULL ORDER BY adoption_id DESC";
                     $adoption_result = mysqli_query($conn, $get_adoption);
 
                     if(mysqli_num_rows($adoption_result) > 0){
@@ -208,7 +214,7 @@
             </div>
             <div class="pets-container-body">
                 <?php
-                    $get_pets = "SELECT * FROM pets_tbl";
+                    $get_pets = "SELECT * FROM pets_tbl ORDER BY pet_id DESC";
                     $result = mysqli_query($conn, $get_pets);
 
                     if(mysqli_num_rows($result) > 0) {
@@ -223,6 +229,7 @@
                                         </div>
                                         <form action='pet-adoption.php' method='post'>
                                             <input type='hidden' id='pet_id' name='pet_id' value='" . $row['pet_id'] . "'>
+                                            <input type='hidden' id='pet_img' name='pet_img' value='" . $row['pet_photo_url'] . "'>
                                             <input type='submit' value='Delete' name='delete' id='delete-pet'>
                                         </form>
                                     </div>

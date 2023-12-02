@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"];
+
+    require_once '../config/mysql-connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,174 +55,65 @@
                 <img src="../assets/images/superpet-products.png" alt="" width="500">
             </div>
             <div class="products-list">
-                <!-- USE PHP TO SHOW PRODUCTS HERE -->
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">Best Seller</div>
-                        <div class="img">
-                            <img src="../assets/images/1.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Woofy</h1>
-                        <p class="price">$ 29.00</p>
-                        <p class="desc">WOOFY: Nourish your adult dog with wholesome, flavorful goodness daily.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="limited-img">
-                        <div class="limited-chip">Limited Edition</div>
-                        <img src="../assets/images/2.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Wagg (Puppy)</h1>
-                        <p class="price">$ 49.00</p>
-                        <p class="desc">Tail-wagging nutrition tailored for your growing and playful puppy.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/3.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Whole Life</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <div class="img">
-                            <img src="../assets/images/4.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">IS Chewies</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/5.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">EagleMountain</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/6.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Percuro</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <div class="img">
-                            <img src="../assets/images/7.png" alt="" width="250">
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Dinovite</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip ">On Sale</div>
-                        <img src="../assets/images/8.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">Lifetime</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <div class="product-categ-chip">On Sale</div>
-                        <img src="../assets/images/9.png" alt="" width="250">
-                    </div>
-                    <div class="product-desc">
-                        <h1 class="name">More</h1>
-                        <p class="price">$ 39.00</p>
-                        <p class="desc">WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.</p>
-                        <div class="product-button">
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
-                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
+                <?php
+                    $get_products = "SELECT * FROM products_tbl";
+                    $result = mysqli_query($conn, $get_products);
+                    
+                    if(mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            if($row["product_category"] === "Limited Edition"){
+                                echo "
+                                <div class='product'>
+                                    <div class='limited-img'>
+                                        <div class='limited-chip '>". $row["product_category"] ."</div>
+                                        <div class='img'>
+                                            <img src='../assets/upload/". $row["product_image_url"]."'width='250'>
+                                        </div>
+                                    </div>
+                                    <div class='product-desc'>
+                                        <h1 class='name'>".$row["product_name"]."</h1>
+                                        <p class='price'>$ ".$row["product_price"]."</p>
+                                        <p class='desc'>".$row["product_description"]."</p>
+                                        <div class='product-button'>
+                                            <form action='shop.php' method='post'>
+                                                <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
+                                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>   
+                                ";
+                            }
+                            else {
+                                echo "
+                                <div class='product'>
+                                    <div class='product-img'>
+                                        <div class='product-categ-chip'>". $row["product_category"] ."</div>
+                                        <div class='img'>
+                                            <img src='../assets/upload/". $row["product_image_url"]."'width='250'>
+                                        </div>
+                                    </div>
+                                    <div class='product-desc'>
+                                        <h1 class='name'>".$row["product_name"]."</h1>
+                                        <p class='price'>$ ".$row["product_price"]."</p>
+                                        <p class='desc'>".$row["product_description"]."</p>
+                                        <div class='product-button'>
+                                            <form action='shop.php' method='post'>
+                                                <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
+                                                <input type='submit' id='buy' name='buy' value='BUY NOW'>
+                                                <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>   
+                                ";   
+                                
+                            }
+                            
+                        }
+                    }
+                ?>
             </div>
         </div>
             

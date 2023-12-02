@@ -13,3 +13,4 @@ document.getElementById("add-new-pet-btn").addEventListener("click", () => {
         addPetModal.style.display = "none";
     });
 });
+

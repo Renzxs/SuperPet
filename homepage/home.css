@@ -244,14 +244,6 @@ body {
     align-items: center;
 }
 
-.limited-product {
-    background-color: #FFB30F;
-}
-
-.limited-product-chip {
-    background-color: #D34E24;
-}
-
 .product-img .product-categ-chip {
     background-color: #FFB30F;
     width: fit-content;

@@ -38,6 +38,7 @@ body {
     align-items: center;
     color: #F1DABF;
     flex-direction: column;
+    z-index: 10;
 }
 
 .nav-sidebar .nav-header{
@@ -399,6 +400,60 @@ input[type="text"] {
     cursor: pointer;
 }
 
+#add-new-product-btn {
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #2978A0;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-new-product-modal {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: #0B2027;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    color: #F1DABF;
+    display: none;
+}
+
+.add-new-product-modal .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: #F1DABF;
+    font-family: "Cubao";
+}
+
+input[type="number"], select{
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #F1DABF;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 10px;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+}
+
+
 .add-new-pet-modal {
     position: absolute;
     top: 20%;
@@ -411,6 +466,144 @@ input[type="text"] {
     display: none;
 }
 
+.add-new-product-modal > .header h2 {
+    font-weight: 100;
+}
+
+.add-new-product-modal form {
+    margin-top: 20px;
+    font-family: 'MontserratALtMed';
+    font-size: 12px;
+}
+
+.products-list {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 30px
+}
+
+.product {
+    width: 230px;
+}
+
+.product-img {
+    background-color: #D34E24;
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.limited-img {
+    background-color: #FFB30F;
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-img .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img .product-categ-chip {
+    background-color: #FFB30F;
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
+    font-family: "MontserratAltXp";
+    color: #0B2027;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 2px solid #0B2027;
+    margin-bottom: 10px;
+}
+
+.limited-chip {
+    background-color: #D34E24;
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
+    font-family: "MontserratAltXp";
+    color: #0B2027;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 2px solid #0B2027;
+    margin-bottom: 10px;
+    color:#F1DABF;
+}
+
+.product-desc {
+    margin-top: 10px;
+}
+
+.product-desc .name{
+    font-family: 'Cubao';
+    color: #0B2027;
+}
+
+.product-desc .price {
+    font-family: 'MontserratAltXp';
+    color: #0B2027;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.product-desc .desc {
+    font-family: 'MontserratAltMed';
+    color: #0B2027;
+    font-size: 10px;
+}
+
+.product-button {
+    margin-top: 20px;
+}
+
+.limited-product {
+    background-color: #FFB30F;
+}
+
+
+.product-button input{
+    outline: none;
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-family: 'MontserratAltMed';
+    font-size: 12px;
+    font-weight: 800;
+}
+
+#buy {
+    background-color: #FFB30F;
+}
+
+#add-to-cart {
+    background-color: #D34E24;
+    color: #F1DABF;
+}    
+
+
+/* PET MODAL */
 .add-new-pet-modal .header {
     display: flex;
     justify-content: flex-start;
@@ -764,6 +957,17 @@ input[type="text"] {
         color: #F1DABF;
     }
 
+    .add-new-product-modal {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: #0B2027;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        color: #F1DABF;
+    }
+
     .notification-container {
         flex-direction: column;
         text-align: center;
@@ -794,6 +998,17 @@ input[type="text"] {
     }
 
     .add-new-pet-modal {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: #0B2027;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        color: #F1DABF;
+    }
+
+    .add-new-product-modal {
         position: absolute;
         top: 20%;
         left: 10%;
