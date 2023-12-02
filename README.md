@@ -36,6 +36,63 @@ FOR ICONS:
 C:\xampp\mysql\data // Paste this in your file explorer
 ```
 
+#### MYSQL TABLES
+- USERS TABLE:
+```
+CREATE TABLE users_tbl (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  username VARCHAR(50),
+  password VARCHAR(50),
+  email VARCHAR(50),
+  address VARCHAR(100),
+  user_role VARCHAR(10)
+)
+```
+- PETS TABLE:
+```
+CREATE TABLE pets_tbl (
+  pet_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  pet_name VARCHAR(50),
+  pet_age VARCHAR(50),
+  pet_breed VARCHAR(50),
+  pet_photo_url VARCHAR(150),
+  pet_desc VARCHAR(255)
+)
+```
+
+- APPOINTMENT TABLE:
+```
+CREATE TABLE appointment_tbl (
+  appointment_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  phone INT,
+  pet_name VARCHAR(50),
+  type_of_pet VARCHAR(50),
+  date DATE,
+  time VARCHAR(20),
+  comments VARCHAR(255),
+  isApproved VARCHAR(50),
+  isCancelled VARCHAR(50),
+  status_msg VARCHAR(255),
+  FOREIGN KEY(user_id) REFERENCES users_tbl(id)
+)
+```
+
+- ADOPTION TABLE:
+```
+  CREATE TABLE adoption_tbl(
+      adoption_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+      user_id INT,
+      pet_id INT,
+      status VARCHAR(50),
+      FOREIGN KEY(user_id) REFERENCES users_tbl(id),
+      FOREIGN KEY(pet_id) REFERENCES users_tbl(pets_id)
+  )
+```
+
+
 - - - -
 🎓 Academic Honesty
 DO NOT COPY FOR AN ASSIGNMENT - Avoid plagiarism and adhere to the spirit of this Academic Honesty Policy.
