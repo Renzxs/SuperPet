@@ -92,7 +92,6 @@ CREATE TABLE appointment_tbl (
   )
 ```
 
-
 - - - -
 🎓 Academic Honesty
 DO NOT COPY FOR AN ASSIGNMENT - Avoid plagiarism and adhere to the spirit of this Academic Honesty Policy.
