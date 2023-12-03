@@ -3,11 +3,20 @@
 
     // DATABASE CONFIG 
     require_once '../config/mysql-connection.php';
+    $email;
+    $password;
+
+    if(empty( $_SESSION["email"]) || empty( $_SESSION["password"])){
+        
+    } else {
+        $email = $_SESSION["email"];
+        $password = $_SESSION["password"];
+    }
 
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: index.php.php");
+        header("Location: index.php");
     }
 
         // DELETE
@@ -111,7 +120,7 @@
             </form>
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
-                    if(isset($_POST["add-product-btn"])) {
+                    if(isset($_POST["add-product-btn"]) && isset($email)) {
                         if(empty($_POST["product-name"]) || empty($_POST["product-price"]) || empty($_FILES["product-photo"]) || empty($_POST["category"]) || empty($_POST["product-desc"])){
                             echo "<p class='error-msg'>Please do not leave textboxes empty.</p>";
                         }
@@ -164,10 +173,10 @@
             
             <div class="orders-list">
                 <?php
-                    $get_orders = "SELECT * FROM orders_tbl WHERE order_status != 'Delivered' OR order_status != 'Cancel Order'";
+                    $get_orders = "SELECT * FROM orders_tbl WHERE order_status <> 'Delivered' AND order_status <> 'Cancelled Order' ORDER BY order_id DESC";
                     $result = mysqli_query($conn, $get_orders);
                                     
-                    if(mysqli_num_rows($result) > 0) {
+                    if(mysqli_num_rows($result) > 0 && isset($email)) {
                         while($row = mysqli_fetch_assoc($result)){
                             $product_id = $row["product_id"];
                             $user_id = $row["user_id"];
@@ -213,7 +222,7 @@
                                                                 <p>Delivered</p>
                                                             </div>
                                                             <div class='status-radio'>
-                                                                <input type='radio' name='status' value='Cancel Order'>
+                                                                <input type='radio' name='status' value='Cancelled Order'>
                                                                 <p>Cancel Order</p>
                                                             </div>
                                                         </div>  
@@ -241,7 +250,7 @@
                     $get_products = "SELECT * FROM products_tbl";
                     $products_result = mysqli_query($conn, $get_products);
 
-                    if(mysqli_num_rows($products_result) > 0){
+                    if(mysqli_num_rows($products_result) > 0 && isset($email)){
                         while($row = mysqli_fetch_assoc($products_result)){
                             if($row["product_category"] === "Limited Edition"){
                             echo "

@@ -3,6 +3,15 @@
 
     // DATABASE CONFIG 
     require_once '../config/mysql-connection.php';
+    $email;
+    $password;
+
+    if(empty( $_SESSION["email"]) || empty( $_SESSION["password"])){
+        
+    } else {
+        $email = $_SESSION["email"];
+        $password = $_SESSION["password"];
+    }
 
      // DELETE USER
      if(isset($_POST['delete']) && isset($_POST['user_id'])) {
@@ -18,7 +27,7 @@
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: index.php.php");
+        header("Location: index.php");
     }
 ?>
 <!DOCTYPE html>
@@ -88,7 +97,7 @@
                     $query = "SELECT * FROM users_tbl;";
                     $result = mysqli_query($conn, $query);
 
-                    if(mysqli_num_rows($result) > 0) {
+                    if(mysqli_num_rows($result) > 0 && isset($email)) {
                         while($row = mysqli_fetch_assoc($result)){
                             if($row['user_role'] == "admin") {
                                 echo "<tr>";

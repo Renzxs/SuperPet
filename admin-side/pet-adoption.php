@@ -3,11 +3,20 @@
 
     // DATABASE CONFIG 
     require_once '../config/mysql-connection.php';
+    $email;
+    $password;
+
+    if(empty( $_SESSION["email"]) || empty( $_SESSION["password"])){
+        
+    } else {
+        $email = $_SESSION["email"];
+        $password = $_SESSION["password"];
+    }
 
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: index.phpphp");
+        header("Location: index.php");
     }
 
     // DELETE
@@ -115,7 +124,7 @@
             </form>
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
-                    if(isset($_POST["add-btn"])){
+                    if(isset($_POST["add-btn"]) && isset($email)){
                         if(empty($_POST["pet-name"]) || empty($_POST["age"]) || empty($_POST["pet-breed"]) || empty($_FILES["pet-photo"]) || empty($_POST["pet-desc"])){
                             echo "<p class='error-msg'>Please do not leave textboxes empty.</p>";
                         }
@@ -180,7 +189,7 @@
                     $get_adoption = "SELECT * FROM adoption_tbl WHERE status IS NULL ORDER BY adoption_id DESC";
                     $adoption_result = mysqli_query($conn, $get_adoption);
 
-                    if(mysqli_num_rows($adoption_result) > 0){
+                    if(mysqli_num_rows($adoption_result) > 0 && isset($email)){
                         while($row = mysqli_fetch_assoc($adoption_result)){
                             $userId = $row["user_id"];
                             $petId = $row["pet_id"];
@@ -217,7 +226,7 @@
                     $get_pets = "SELECT * FROM pets_tbl ORDER BY pet_id DESC";
                     $result = mysqli_query($conn, $get_pets);
 
-                    if(mysqli_num_rows($result) > 0) {
+                    if(mysqli_num_rows($result) > 0 && isset($email)) {
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<div class='pet-container'>
                                     <div class='pet-info'>

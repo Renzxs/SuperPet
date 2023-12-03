@@ -4,6 +4,17 @@
     // DATABASE CONFIG 
     require_once '../config/mysql-connection.php';
 
+    $email;
+    $password;
+
+    if(empty( $_SESSION["email"]) || empty( $_SESSION["password"])){
+        
+    } else {
+        $email = $_SESSION["email"];
+        $password = $_SESSION["password"];
+    }
+
+
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
@@ -77,7 +88,7 @@
                         $getAppointments = "SELECT * FROM appointment_tbl WHERE isApproved IS NULL ORDER BY appointment_id DESC";
                         $result = mysqli_query($conn, $getAppointments);
 
-                        if(mysqli_num_rows($result) > 0) {
+                        if(mysqli_num_rows($result) > 0 && isset($email)) {
                             while($row = mysqli_fetch_assoc($result)){
                                 $userid = $row['user_id'];
 
