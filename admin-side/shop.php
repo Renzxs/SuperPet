@@ -7,7 +7,7 @@
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: admin-login.php");
+        header("Location: index.php.php");
     }
 
         // DELETE
@@ -23,6 +23,13 @@
     
         // DELETE THE PHOTO IN THE DATABASE AND ALSO IN THE PATH FOLDER
     
+    }
+
+    if(isset($_POST["status"]) && isset($_POST["update"]) && isset($_POST["order_id"])){
+        $status = $_POST["status"];
+        $order_id = $_POST["order_id"];
+        $update_status = "UPDATE orders_tbl SET order_status = '$status' WHERE order_id = $order_id";
+        mysqli_query($conn, $update_status);
     }
 ?>
 <!DOCTYPE html>
@@ -153,6 +160,80 @@
         </div>
 
             <button id="add-new-product-btn">ADD PRODUCT</button>
+
+            
+            <div class="orders-list">
+                <?php
+                    $get_orders = "SELECT * FROM orders_tbl WHERE order_status != 'Delivered' OR order_status != 'Cancel Order'";
+                    $result = mysqli_query($conn, $get_orders);
+                                    
+                    if(mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            $product_id = $row["product_id"];
+                            $user_id = $row["user_id"];
+
+                            $get_product = "SELECT * FROM products_tbl WHERE product_id = $product_id";
+                            $product_result = mysqli_query($conn, $get_product);
+
+                            if(mysqli_num_rows($product_result) > 0) {
+                                while($product_row = mysqli_fetch_assoc($product_result)){
+                                    $get_user = "SELECT * FROM users_tbl WHERE id = $user_id";
+                                    $user_result = mysqli_query($conn, $get_user);
+
+                                    if(mysqli_num_rows($user_result) > 0) {
+                                        while($user_row = mysqli_fetch_assoc($user_result)){
+                                            echo "
+                                            <div class='order-container'>
+                                                <div class='product-info'>
+                                                    <img src='../assets/upload/".$product_row["product_image_url"]."' width='200'>
+                                                    <h1>".$product_row["product_name"]."</h1>
+                                                    <p>$".$product_row["product_price"]."</p>
+                                                </div>
+                                                <div class='order-status'>
+                                                    <h1>".$user_row["username"]."</h1>
+                                                    <p>".$user_row["address"]."</p>
+                                                    <form action='shop.php' method='post'>
+                                                        <h3>Order Status :</h3>
+                                                        <br>
+                                                        <div class='status-radios'>
+                                                            <div class='status-radio'>
+                                                                <input type='radio' name='status' value='Packaging'>
+                                                                <p>Packaging</p>
+                                                            </div>
+                                                            <div class='status-radio'>
+                                                                <input type='radio' name='status' value='Ready for Delivery'>
+                                                                <p>Ready for Delivery</p>
+                                                            </div>
+                                                            <div class='status-radio'>
+                                                                <input type='radio' name='status' value='On the way'>
+                                                                <p>On the way</p>
+                                                            </div>
+                                                            <div class='status-radio'>
+                                                                <input type='radio' name='status' value='Delivered'>
+                                                                <p>Delivered</p>
+                                                            </div>
+                                                            <div class='status-radio'>
+                                                                <input type='radio' name='status' value='Cancel Order'>
+                                                                <p>Cancel Order</p>
+                                                            </div>
+                                                        </div>  
+                                                        <input type='hidden' name='order_id' value='".$row["order_id"]."'>  
+                                                        <input type='submit' name='update' class='update-btn' value='Update'>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            ";
+
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                ?>
+
+            </div>
 
             <div class="products-list">
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->

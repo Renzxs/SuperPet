@@ -22,7 +22,6 @@
                     <div class="links">
                         <a href="#" class="link in-log">NEW USER</a>
                         <a href="../index.php" class="link ">EXISTING USER</a>
-                        <a href="../admin-side/admin-login.php" class="link">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <p class="input-label">USERNAME</p>

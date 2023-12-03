@@ -1,12 +1,24 @@
 <?php
     session_start();
 
+    $userId = $_SESSION["user_id"];
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $email =$_SESSION["email"];
+    $address =$_SESSION["address"];
+
     require_once '../config/mysql-connection.php';
 
     if(isset($_POST["logout"])) {
         session_destroy();
         header("Location: ../index.php");
         exit;
+    }
+    
+    if(isset($_POST["buy"]) && isset($_POST["product_id"]) && isset($userId)){
+        $productId = $_POST["product_id"];
+        $insert_query = "INSERT INTO orders_tbl(product_id, user_id) VALUES($productId, $userId)";
+        mysqli_query($conn, $insert_query);
     }
 ?>
 <!DOCTYPE html>
@@ -117,7 +129,7 @@
                                         <p class='price'>$ ".$row["product_price"]."</p>
                                         <p class='desc'>".$row["product_description"]."</p>
                                         <div class='product-button'>
-                                            <form action='shop.php' method='post'>
+                                            <form action='home.php' method='post'>
                                                 <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
                                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
                                                 <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>
@@ -140,7 +152,7 @@
                                         <p class='price'>$ ".$row["product_price"]."</p>
                                         <p class='desc'>".$row["product_description"]."</p>
                                         <div class='product-button'>
-                                            <form action='shop.php' method='post'>
+                                            <form action='home.php' method='post'>
                                                 <input type='hidden' id='product_id' name='product_id' value='" . $row['product_id'] . "'>
                                                 <input type='submit' id='buy' name='buy' value='BUY NOW'>
                                                 <input type='submit' id='add-to-cart' name='add-to-cart' value='ADD TO CART'>

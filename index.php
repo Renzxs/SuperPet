@@ -23,7 +23,6 @@
                     <div class="links">
                         <a href="login-register/register.php" class="link">NEW USER</a>
                         <a href="#" class="link in-log">EXISTING USER</a>
-                        <a href="admin-side/admin-login.php" class="link">ADMIN</a>
                     </div>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <p class="input-label">EMAIL</p>

@@ -7,7 +7,7 @@
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: admin-login.php");
+        header("Location: index.php");
     }
 
     if(isset($_POST["reject"]) && isset($_POST['appointment_id']) && isset($_POST['comments'])) {

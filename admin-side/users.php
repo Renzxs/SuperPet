@@ -18,7 +18,7 @@
     // LOGOUT
     if(isset($_POST["logout"])){
         session_destroy();
-        header("Location: admin-login.php");
+        header("Location: index.php.php");
     }
 ?>
 <!DOCTYPE html>

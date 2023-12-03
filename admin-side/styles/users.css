@@ -814,6 +814,87 @@ input[type="number"], select{
     cursor: pointer;
 }  
 
+.orders-list {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+
+.order-container {
+    padding: 10px 10px 30px 10px;
+    outline: none;
+    background-color: #2978A0;
+    font-size: 12px;
+    color: #F1DABF;
+    width: 70%;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.product-info h1 {
+    font-family: "Cubao";
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.order-status form {
+    margin-top: 30px;
+}
+
+.status-radios {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.status-radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+}
+
+.update-btn {
+    margin-top: 30px;
+    padding: 10px;
+    outline: none;
+    background-color: #11AD2A;
+    font-size: 12px;
+    color: #F1DABF;
+    font-family: 'MontserratAltXp';
+    border-bottom: 8px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 890px) {
     table tr, td{
@@ -917,6 +998,28 @@ input[type="number"], select{
     .appoint-info .schedule {
         width: 100%;
         
+    }
+    .order-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .order-status {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .order-status form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .status-radios {
+        justify-content: center;
     }
 
 }
