@@ -46,7 +46,9 @@
             </nav>
             <div class="nav-icon-btns">
                 <i class="fa-solid fa-shopping-cart"></i>
-                <i class="fa-solid fa-circle-user"></i>
+                <a href="../account/account.php" class="account-btn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
             </div>
         </div>
 

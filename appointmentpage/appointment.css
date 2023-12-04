@@ -63,6 +63,10 @@ body {
     color: #0B2027;
 }
 
+.nav-icon-btns a {
+    color: #0B2027 !important;
+}
+
 #menu-nav-btn {
     color: #0B2027;
     display: none;

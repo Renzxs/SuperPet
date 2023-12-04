@@ -24,14 +24,14 @@
     if(isset($_POST["reject"]) && isset($_POST['appointment_id']) && isset($_POST['comments'])) {
         $appointment_id = $_POST['appointment_id'];
         $comments = htmlentities($_POST['comments']);
-        $query = "UPDATE appointment_tbl SET isApproved = 'Request Declined', status_msg = '$comments' WHERE appointment_id = $appointment_id";
+        $query = "UPDATE appointment_tbl SET isApproved = 'Declined', status_msg = '$comments' WHERE appointment_id = $appointment_id";
         mysqli_query($conn, $query);
     }
 
     if(isset($_POST["approve"]) && isset($_POST['appointment_id']) && isset($_POST['comments'])) {
         $appointment_id = $_POST['appointment_id'];
         $comments = htmlentities($_POST['comments']);
-        $query = "UPDATE appointment_tbl SET isApproved = 'Request Approved', status_msg = '$comments' WHERE appointment_id = $appointment_id";
+        $query = "UPDATE appointment_tbl SET isApproved = 'Approved', status_msg = '$comments' WHERE appointment_id = $appointment_id";
         mysqli_query($conn, $query);
     }
 ?>

@@ -7,7 +7,7 @@
     $email;
     $address;
 
-    if(empty($userId) || empty($username) || empty($password) || empty($email) || empty($address)){
+    if(empty($_SESSION["user_id"]) || empty( $_SESSION["username"]) || empty( $_SESSION["password"]) || empty($_SESSION["email"]) || empty($_SESSION["address"])){
         // Let unregister users see the home page
     } 
     else{
@@ -58,7 +58,10 @@
             </nav>
             <div class="nav-icon-btns">
                 <i class="fa-solid fa-shopping-cart"></i>
-                <i class="fa-solid fa-circle-user"></i>
+                <a href="../account/account.php" class="account-btn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+                
                 <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <button type="submit" class="logout" name="logout">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
