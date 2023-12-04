@@ -21,7 +21,7 @@
             <div class="container-login">
                <div class="login-form">
                     <div class="links">
-                        <a href="#" class="link">NEW USER</a>
+                        <a href="../login-register/register.php" class="link">NEW USER</a>
                         <a href="../index.php" class="link ">EXISTING USER</a>
                         <a href="#" class="link in-log">ADMIN</a>
                     </div>

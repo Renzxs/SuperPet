@@ -1,10 +1,22 @@
 <?php
     session_start();
-    $userId = $_SESSION["user_id"];
-    $username = $_SESSION["username"];
-    $password = $_SESSION["password"];
-    $email =$_SESSION["email"];
-    $address =$_SESSION["address"];
+    $userId;
+    $username;
+    $password;
+    $email;
+    $address;
+
+    if(empty($_SESSION["user_id"]) || empty($_SESSION["username"]) || empty($_SESSION["password"]) || empty($_SESSION["email"]) || empty($_SESSION["address"])){
+        // Let unregister users see the home page
+        header("Location: ../index.php");
+    } 
+    else{
+        $userId = $_SESSION["user_id"];
+        $username = $_SESSION["username"];
+        $password = $_SESSION["password"];
+        $email =$_SESSION["email"];
+        $address =$_SESSION["address"];
+    }
 
     require_once '../config/mysql-connection.php';
 ?>
@@ -103,7 +115,7 @@
             </form>
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
-                    if(isset($_POST["submit"])) {
+                    if(isset($_POST["submit"]) && isset($userId)) {
                         if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["phone"]) || empty($_POST["email"]) || empty($_POST["date"]) || empty($_POST["time"]) || empty($_POST["comments"])) 
                         {
                             echo "<p class='error-msg'>Please do not leave textboxes empty.</p>";
@@ -125,7 +137,7 @@
                             mysqli_query($conn, $insert_query);
                             echo "<p class='success-msg'>Thank you for booking an appointment, Just wait and we will reponse you as much as possible.</p>";
                             mysqli_close($conn);
-                        }
+                        } 
                     }
                 }
             ?>

@@ -1,14 +1,25 @@
 <?php
     session_start();
 
-    $userId = $_SESSION["user_id"];
-    $username = $_SESSION["username"];
-    $password = $_SESSION["password"];
-    $email =$_SESSION["email"];
-    $address =$_SESSION["address"];
+    $userId;
+    $username;
+    $password;
+    $email;
+    $address;
+
+    if(empty($userId) || empty($username) || empty($password) || empty($email) || empty($address)){
+        // Let unregister users see the home page
+    } 
+    else{
+        $userId = $_SESSION["user_id"];
+        $username = $_SESSION["username"];
+        $password = $_SESSION["password"];
+        $email =$_SESSION["email"];
+        $address =$_SESSION["address"];
+    }
 
     require_once '../config/mysql-connection.php';
-
+    
     if(isset($_POST["logout"])) {
         session_destroy();
         header("Location: ../index.php");
@@ -188,11 +199,3 @@
     </div>
 </body>
 </html>
-
-<?php
-    $userId = $_SESSION["user_id"];
-    $username = $_SESSION["username"];
-    $password = $_SESSION["password"];
-    $email =$_SESSION["email"];
-    $address =$_SESSION["address"]; 
-?>

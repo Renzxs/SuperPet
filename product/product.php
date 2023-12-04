@@ -1,10 +1,22 @@
 <?php
     session_start();
-    $userId = $_SESSION["user_id"];
-    $username = $_SESSION["username"];
-    $password = $_SESSION["password"];
-    $email =$_SESSION["email"];
-    $address =$_SESSION["address"];
+    $userId;
+    $username;
+    $password;
+    $email;
+    $address;
+
+    if(empty($_SESSION["user_id"]) || empty($_SESSION["username"]) || empty($_SESSION["password"]) || empty($_SESSION["email"]) || empty($_SESSION["address"])){
+        // Let unregister users see the home page
+        header("Location: ../index.php");
+    } 
+    else{
+        $userId = $_SESSION["user_id"];
+        $username = $_SESSION["username"];
+        $password = $_SESSION["password"];
+        $email =$_SESSION["email"];
+        $address =$_SESSION["address"];
+    }
 
     require_once '../config/mysql-connection.php';
 
