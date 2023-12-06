@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 04:44 PM
+-- Generation Time: Dec 04, 2023 at 04:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -34,14 +34,6 @@ CREATE TABLE `adoption_tbl` (
   `status` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `adoption_tbl`
---
-
-INSERT INTO `adoption_tbl` (`adoption_id`, `user_id`, `pet_id`, `status`) VALUES
-(20, 4, 12, 'Rejected'),
-(21, 4, 13, 'Rejected');
-
 -- --------------------------------------------------------
 
 --
@@ -62,6 +54,19 @@ CREATE TABLE `appointment_tbl` (
   `isApproved` varchar(10) DEFAULT NULL,
   `isCancelled` varchar(10) DEFAULT NULL,
   `status_msg` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders_tbl`
+--
+
+CREATE TABLE `orders_tbl` (
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `order_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -108,7 +113,6 @@ CREATE TABLE `products_tbl` (
 --
 
 INSERT INTO `products_tbl` (`product_id`, `product_name`, `product_image_url`, `product_category`, `product_description`, `product_price`) VALUES
-(6, 'Woofy', 'IMG-656b20a8369f78.61880561.png', 'Best Seller', 'Best Doggo Food on the town.', 39),
 (7, 'wagg (Puppy)', 'IMG-656b21e988cf79.64695288.png', 'Best Seller', 'Tail-wagging nutrition tailored for your growing and playful puppy.', 49),
 (8, 'Dinovate', 'IMG-656b2242c61aa1.93679345.png', 'Limited Edition', 'Tail-wagging nutrition tailored for your growing and playful puppy.', 89),
 (9, 'Whole Life', 'IMG-656b2785a31564.57331769.png', 'Best Seller', 'WHOLE LIFE: Tasty dog biscuits for a tail-wagging, lifelong delight.', 39);
@@ -133,10 +137,8 @@ CREATE TABLE `users_tbl` (
 --
 
 INSERT INTO `users_tbl` (`id`, `username`, `password`, `email`, `address`, `user_role`) VALUES
-(1, 'admin', 'superpetadmin123', 'superpet@gmail.com', 'Valenzuela City', 'admin'),
-(4, 'Renzxs', '54321', 'florencebatol85@gmail.com', 'Philippines, Manila City', 'customer'),
-(5, 'Lebron James', '321', 'lebron@gmail.com', 'Philippines, Ilocus Sur', 'customer'),
-(6, 'jamorant', 'billgates', 'jamorant@gmail.com', 'dyanlang', 'customer');
+(1, 'admin', 'superpetadmin12345', 'superpet@gmail.com', 'Valenzuela city', 'admin'),
+(10, 'Tony', '123', 'tonystark@gmail.com', 'United State', 'customer');
 
 --
 -- Indexes for dumped tables
@@ -155,6 +157,14 @@ ALTER TABLE `adoption_tbl`
 --
 ALTER TABLE `appointment_tbl`
   ADD PRIMARY KEY (`appointment_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `orders_tbl`
+--
+ALTER TABLE `orders_tbl`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `product_id` (`product_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -184,13 +194,19 @@ ALTER TABLE `users_tbl`
 -- AUTO_INCREMENT for table `adoption_tbl`
 --
 ALTER TABLE `adoption_tbl`
-  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `appointment_tbl`
 --
 ALTER TABLE `appointment_tbl`
-  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `orders_tbl`
+--
+ALTER TABLE `orders_tbl`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `pets_tbl`
@@ -202,13 +218,13 @@ ALTER TABLE `pets_tbl`
 -- AUTO_INCREMENT for table `products_tbl`
 --
 ALTER TABLE `products_tbl`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users_tbl`
 --
 ALTER TABLE `users_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
@@ -226,6 +242,13 @@ ALTER TABLE `adoption_tbl`
 --
 ALTER TABLE `appointment_tbl`
   ADD CONSTRAINT `appointment_tbl_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users_tbl` (`id`);
+
+--
+-- Constraints for table `orders_tbl`
+--
+ALTER TABLE `orders_tbl`
+  ADD CONSTRAINT `orders_tbl_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products_tbl` (`product_id`),
+  ADD CONSTRAINT `orders_tbl_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users_tbl` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

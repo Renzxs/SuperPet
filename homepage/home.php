@@ -81,34 +81,34 @@
             </nav>
         </div>
 
-        <div class="announcement">
+        <div class="announcement item hidden">
             <p>Christmas Sale   •  Get 50% OFF for your first order! </p>
         </div>
         <div class="banner">
             <img src="../assets/images/HERO-BG.png" alt="" width="200">
-            <div class="banner-txt">
+            <div class="banner-txt hidden">
                 <img src="../assets/images/banner-text.png" alt="" width="100">
                 <p class="sub-desc"><strong>Discover SuperPet, where adorable meets superhero.</strong> Elevate your pet's well-being with our whimsical, expert care!</p>
                 <a href="../appointmentpage/appointment.php" class="appointment-btn">BOOK AN APPOINTMENT</a>
             </div>
         </div>
-        <div class="stickers">
-            <div class="sticker">
+        <div class="stickers hidden">
+            <div class="sticker item hidden">
                 <img src="../assets/images/dog.png" alt="" width="100px">
                 <h1 class="sticker-title">Supercare for SuperPets</h1>
                 <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
             </div>
-            <div class="sticker">
+            <div class="sticker item hidden">
                 <img src="../assets/images/duck.png" alt="" width="100px">
                 <h1 class="sticker-title">Compassionate Service</h1>
                 <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
             </div>
-            <div class="sticker">
+            <div class="sticker item hidden">
                 <img src="../assets/images/cat.png" alt="" width="100px">
                 <h1 class="sticker-title">Top-Notch Facilities</h1>
                 <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
             </div>
-            <div class="sticker">
+            <div class="sticker item hidden">
                 <img src="../assets/images/froggy.png" alt="" width="100px">
                 <h1 class="sticker-title">Community Support</h1>
                 <p class="sticker-desc">Passionate professionals ensuring your pet's well-being with personalized attention.</p>
@@ -116,12 +116,12 @@
         </div>
 
         <div class="product-page">
-            <div class="product-header">
+            <div class="product-header hidden">
                 <img src="../assets/images/superpet-product.png" alt="" width="500">
                 <p class="desc"><strong>Explore SuperPet's curated selection of premium products.</strong> tailored to enhance your pet's joy and well-being.</p>
                 <a href="../product/product.php" class="show-now-btn">SHOP NOW!</a>
             </div>
-            <div class="products-list">
+            <div class="products-list hidden">
                 <!-- USE PHP TO SHOW PRODUCTS HERE -->
                 <?php
                     $get_products = "SELECT * FROM products_tbl LIMIT 3";
@@ -131,7 +131,7 @@
                         while($row = mysqli_fetch_assoc($result)){
                             if($row["product_category"] === "Limited Edition"){
                                 echo "
-                                <div class='product '>
+                                <div class='product  hidden '>
                                     <div class='product-img limited-product'>
                                         <div class='product-categ-chip'>". $row["product_category"] ."</div>
                                         <div class='img'>
@@ -154,7 +154,7 @@
                                 ";
                             } else {
                                 echo "
-                                <div class='product '>
+                                <div class='product hidden'>
                                     <div class='product-img'>
                                         <div class='product-categ-chip'>". $row["product_category"] ."</div>
                                         <div class='img'>
@@ -184,8 +184,8 @@
         </div>
 
         <div class="pet-adopt-page">
-            <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
-            <div class="main-adopt-page">
+            <div class="adopt-banner item hidden">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
+            <div class="main-adopt-page hidden">
                 <img class="pets-bg" src="../assets/images/adopt-hero.webp" alt="">
                 <div class="adopt-text">
                     <img src="../assets/images/ADOPT YOUR SUPERPET.png" alt="" width="300">
@@ -193,7 +193,7 @@
                     <a href="../adoptpage/adoptpage.php" class="adopt-now">LET'S ADOPT NOW!</a>
                 </div>
             </div>
-            <div class="adopt-banner">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
+            <div class="adopt-banner item hidden">ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET • ADOPT YOUR SUPERPET</div>
         </div>            
         <footer>
             <img src="../assets/images/Letter_Logo.png" alt="" width="200">

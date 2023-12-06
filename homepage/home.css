@@ -326,6 +326,7 @@ body {
     font-weight: 800;
     font-size: 12px;
     padding: 10px;
+    overflow: hidden;
 }
 
 .main-adopt-page {
@@ -523,4 +524,60 @@ footer p {
     .adopt-desc {
         width: 80%;
     }
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.item {
+    transform: translateX(-100%);
+    filter: blur(5px);
+    opacity: 0;
+}
+
+.item-rev  {
+    transform: translateX(100%);
+    filter: blur(5px);
+    opacity: 0;
+}
+
+
+.slide {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+}
+
+.item:nth-child(1) {
+    transition-delay: 300ms;
+}
+
+.item:nth-child(2) {
+    transition-delay: 500ms;
+}
+
+.item:nth-child(3) {
+    transition-delay: 700ms;
+}
+
+.item:nth-child(4) {
+    transition-delay:900ms;
+}
+
+.item-rev:nth-child(1) {
+    transition-delay: 300ms;
+}
+
+.item-rev:nth-child(2) {
+    transition-delay: 500ms;
+}
+
+.item-rev:nth-child(3) {
+    transition-delay: 700ms;
 }
