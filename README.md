@@ -1,4 +1,4 @@
-👋 Hello, We are the SuperTeam Studios!
+👋 Hello, We are the SuperTeam Studio!
 
 # SuperPet: A Web-based Veterinary System.
 ![image](https://github.com/Renzxs/SuperPet/assets/90491632/5aa2bade-a8a7-4544-9fa5-bbe8bd18959b)
